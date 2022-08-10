@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>16/baby-chevy-down-granite</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.282241,5.30370835 C11.6667923,4.90730102 12.2998843,4.89768977 12.6962917,5.28224103 C13.092699,5.6667923 13.1023102,6.29988432 12.717759,6.69629165 L8.77848469,10.7570174 C8.38979911,11.1576865 7.74834177,11.1625553 7.35361894,10.7678325 L3.29289322,6.70710678 C2.90236893,6.31658249 2.90236893,5.68341751 3.29289322,5.29289322 C3.68341751,4.90236893 4.31658249,4.90236893 4.70710678,5.29289322 L8.04990935,8.63569579 L11.282241,5.30370835 Z" id="path-1"></path>
+    </defs>
+    <g id="16/baby-chevy-down-granite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Chevron" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

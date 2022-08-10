@@ -1,0 +1,535 @@
+@import "variables";
+
+/************************************************SPACING STYLES*********************************/
+
+
+/*******QUARTER UNIT*********/
+
+.p-1qu {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.pt-1qu {
+    padding-top: 4px;
+}
+
+.pb-1qu {
+    padding-bottom: 4px;
+}
+
+.m-1qu {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.mt-1qu {
+    margin-top: 4px;
+}
+
+.mb-1qu {
+    margin-bottom: 4px;
+}
+
+
+/*******HALF UNIT*********/
+
+.p-1hu {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.pt-1hu {
+    padding-top: 8px;
+}
+
+.pb-1hu {
+    padding-bottom: 8px;
+}
+
+.m-1hu {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.mt-1hu {
+    margin-top: 8px;
+}
+
+.mb-1hu {
+    margin-bottom: 8px;
+}
+
+
+/*******3 QUARTER UNIT*********/
+
+.p-3qu {
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.pt-3qu {
+    padding-top: 12px;
+}
+
+.pb-3qu {
+    padding-bottom: 12px;
+}
+
+.m-3qu {
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.mt-3qu {
+    margin-top: 12px;
+}
+
+.mb-3qu {
+    margin-bottom: 12px;
+}
+
+
+/*******ONE UNIT*********/
+
+.p-1u {
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.pt-1u {
+    padding-top: 16px;
+}
+
+.pb-1u {
+    padding-bottom: 16px;
+}
+
+.m-1u {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.mt-1u {
+    margin-top: 16px;
+}
+
+.mb-1u {
+    margin-bottom: 16px;
+}
+
+
+/*******TWO UNITS*********/
+
+.p-2u {
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+.pt-2u {
+    padding-top: 32px;
+}
+
+.pb-2u {
+    padding-bottom: 32px;
+}
+
+.m-2u {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.mt-2u {
+    margin-top: 32px;
+}
+
+.mb-2u {
+    margin-bottom: 32px;
+}
+
+
+/*******Three UNITS*********/
+
+.p-3u {
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+.pt-3u {
+    padding-top: 48px;
+}
+
+.pb-3u {
+    padding-bottom: 48px;
+}
+
+.m-3u {
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
+
+.mt-3u {
+    margin-top: 48px;
+}
+
+.mb-3u {
+    margin-bottom: 48px;
+}
+
+
+/*******Four UNITS*********/
+
+.p-4u {
+    padding-bottom: 64px;
+    padding-top: 64px;
+}
+
+.pt-4u {
+    padding-top: 64px;
+}
+
+.pb-4u {
+    padding-bottom: 64px;
+}
+
+.m-4u {
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.mt-4u {
+    margin-top: 64px;
+}
+
+.mb-4u {
+    margin-bottom: 64px;
+}
+
+
+/*******Five UNITS*********/
+
+.p-5u {
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.pt-5u {
+    padding-top: 80px;
+}
+
+.pb-5u {
+    padding-bottom: 80px;
+}
+
+.m-5u {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.mt-5u {
+    margin-top: 80px;
+}
+
+.mb-5u {
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: $lg-screen-max) {
+    /*******QUARTER UNIT*********/
+    .p-1qu-tab {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .pt-1qu-tab {
+        padding-top: 4px;
+    }
+    .pb-1qu-tab {
+        padding-bottom: 4px;
+    }
+    .m-1qu-tab {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .mt-1qu-tab {
+        margin-top: 4px;
+    }
+    .mb-1qu-tab {
+        margin-bottom: 4px;
+    }
+    /*******HALF UNIT*********/
+    .p-1hu-tab {
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+    .pt-1hu-tab {
+        padding-top: 8px;
+    }
+    .pb-1hu-tab {
+        padding-bottom: 8px;
+    }
+    .m-1hu-tab {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .mt-1hu-tab {
+        margin-top: 8px;
+    }
+    .mb-1hu-tab {
+        margin-bottom: 8px;
+    }
+    /*******3 QUARTER UNIT*********/
+    .p-3qu-tab {
+        padding-bottom: 12px;
+        padding-top: 12px;
+    }
+    .pt-3qu-tab {
+        padding-top: 12px;
+    }
+    .pb-3qu-tab {
+        padding-bottom: 12px;
+    }
+    .m-3qu-tab {
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+    .mt-3qu-tab {
+        margin-top: 12px;
+    }
+    .mb-3qu-tab {
+        margin-bottom: 12px;
+    }
+    /*******ONE UNIT*********/
+    .p-1u-tab {
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    .pt-1u-tab {
+        padding-top: 16px;
+    }
+    .pb-1u-tab {
+        padding-bottom: 16px;
+    }
+    .m-1u-tab {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    .mt-1u-tab {
+        margin-top: 16px;
+    }
+    .mb-1u-tab {
+        margin-bottom: 16px;
+    }
+    /*******TWO UNITS*********/
+    .p-2u-tab {
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
+    .pt-2u-tab {
+        padding-top: 32px;
+    }
+    .pb-2u-tab {
+        padding-bottom: 32px;
+    }
+    .m-2u-tab {
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+    .mt-2u-tab {
+        margin-top: 32px;
+    }
+    .mb-2u-tab {
+        margin-bottom: 32px;
+    }
+    /*******Three UNITS*********/
+    .p-3u-tab {
+        padding-bottom: 48px;
+        padding-top: 48px;
+    }
+    .pt-3u-tab {
+        padding-top: 48px;
+    }
+    .pb-3u-tab {
+        padding-bottom: 48px;
+    }
+    .m-3u-tab {
+        margin-bottom: 48px;
+        margin-top: 48px;
+    }
+    .mt-3u-tab {
+        margin-top: 48px;
+    }
+    .mb-3u-tab {
+        margin-bottom: 48px;
+    }
+    /*******Four UNITS*********/
+    .p-4u-tab {
+        padding-bottom: 64px;
+        padding-top: 64px;
+    }
+    .pt-4u-tab {
+        padding-top: 64px;
+    }
+    .pb-4u-tab {
+        padding-bottom: 64px;
+    }
+    .m-4u-tab {
+        margin-bottom: 64px;
+        margin-top: 64px;
+    }
+    .mt-4u-tab {
+        margin-top: 64px;
+    }
+    .mb-4u-tab {
+        margin-bottom: 64px;
+    }
+    /*******Five UNITS*********/
+    .p-5u-tab {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+    .pt-5u-tab {
+        padding-top: 80px;
+    }
+    .pb-5u-tab {
+        padding-bottom: 80px;
+    }
+    .m-5u-tab {
+        margin-bottom: 80px;
+        margin-top: 80px;
+    }
+    .mt-5u-tab {
+        margin-top: 80px;
+    }
+    .mb-5u-tab {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: $sm-screen-max) {
+    /*******QUARTER UNIT*********/
+    .p-1qu-mob {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .pt-1qu-mob {
+        padding-top: 4px;
+    }
+    .pb-1qu-mob {
+        padding-bottom: 4px;
+    }
+    .m-1qu-mob {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .mt-1qu-mob {
+        margin-top: 4px;
+    }
+    .mb-1qu-mob {
+        margin-bottom: 4px;
+    }
+    /*******HALF UNIT*********/
+    .p-1hu-mob {
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+    .pt-1hu-mob {
+        padding-top: 8px;
+    }
+    .pb-1hu-mob {
+        padding-bottom: 8px;
+    }
+    .m-1hu-mob {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .mt-1hu-mob {
+        margin-top: 8px;
+    }
+    .mb-1hu-mob {
+        margin-bottom: 8px;
+    }
+    /*******3 QUARTER UNIT*********/
+    .p-3qu-mob {
+        padding-bottom: 12px;
+        padding-top: 12px;
+    }
+    .pt-3qu-mob {
+        padding-top: 12px;
+    }
+    .pb-3qu-mob {
+        padding-bottom: 12px;
+    }
+    .m-3qu-mob {
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+    .mt-3qu-mob {
+        margin-top: 12px;
+    }
+    .mb-3qu-mob {
+        margin-bottom: 12px;
+    }
+    /*******ONE UNIT*********/
+    .p-1u-mob {
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    .pt-1u-mob {
+        padding-top: 16px;
+    }
+    .pb-1u-mob {
+        padding-bottom: 16px;
+    }
+    .m-1u-mob {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    .mt-1u-mob {
+        margin-top: 16px;
+    }
+    .mb-1u-mob {
+        margin-bottom: 16px;
+    }
+    /*******TWO UNITS*********/
+    .p-2u-mob {
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
+    .pt-2u-mob {
+        padding-top: 32px;
+    }
+    .pb-2u-mob {
+        padding-bottom: 32px;
+    }
+    .m-2u-mob {
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+    .mt-2u-mob {
+        margin-top: 32px;
+    }
+    .mb-2u-mob {
+        margin-bottom: 32px;
+    }
+    /*******Three UNITS*********/
+    .p-3u-mob {
+        padding-bottom: 48px;
+        padding-top: 48px;
+    }
+    .pt-3u-mob {
+        padding-top: 48px;
+    }
+    .pb-3u-mob {
+        padding-bottom: 48px;
+    }
+    .m-3u-mob {
+        margin-bottom: 48px;
+        margin-top: 48px;
+    }
+    .mt-3u-mob {
+        margin-top: 48px;
+    }
+    .mb-3u-mob {
+        margin-bottom: 48px;
+    }
+}

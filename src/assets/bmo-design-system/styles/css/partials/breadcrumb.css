@@ -1,0 +1,167 @@
+/***GLOBAL COLORS***/
+:root {
+  --global-font-color: var(--bmo-slate);
+  --global-bg-color: var(--bmo-albicant);
+  --global-bg-color-raised: var(--brand-white);
+  --global-link-color: var(--brand-pri);
+  --global-link-color-over: var(--brand-pri-over);
+  --global-focus-shadow: 0 0 0 2px #BEDCEB, 0 0 0 3px #005587;
+  --global-font: 'heebo', sans-serif;
+  /************DEFINE COLORS*********/
+  --bmo-bluea: #0075be;
+  --bmo-ultramarine: #005587;
+  --bmo-slate: #001928;
+  --bmo-granite: #646c76;
+  --bmo-grey: #929ba9;
+  --bmo-light-grey: #d9dce1;
+  --bmo-albicant: #f5f6f7;
+  --bmo-white: #ffffff;
+  --bmo-cerulean: #73C3EB;
+  --bmo-azure: #BEDCEB;
+  /***FEEDBACK COLOURS***/
+  --bmo-negative: #C81414;
+  --bmo-positive: #0B8224;
+  --bmo-warning: #D07704;
+  --bmo-disabled: #ECECEE;
+  /****BMO SKY BLUE***/
+  --bmo-sky-blue: #009EC9;
+  --bmo-sky-blue-lighter: #96DFEE;
+  --bmo-sky-blue-light: #00BDDD;
+  --bmo-sky-blue-dark: #0085AC;
+  --bmo-sky-blue-darker: #00698B;
+  /***BMO OLIVE***/
+  --bmo-olive: #C3C070;
+  --bmo-olive-lighter: #EAE9CA;
+  --bmo-olive-light: #D5D393;
+  --bmo-olive-dark: #9B9F58;
+  --bmo-olive-darker: #737E4E;
+  /***BMO POOLSIDE***/
+  --bmo-poolside: #2CBFC1;
+  --bmo-poolside-lighter: #A7EBEB;
+  --bmo-poolside-light: #36D5D4;
+  --bmo-poolside-dark: #00A0A4;
+  --bmo-poolside-darker: #007E85;
+  /***BMO SUNFLOWER***/
+  --bmo-sunflower: #FFC700;
+  --bmo-sunflower-lighter: #FFECAC;
+  --bmo-sunflower-light: #FFD84D;
+  --bmo-sunflower-dark: #D3A400;
+  --bmo-sunflower-darker: #9D8200;
+  /***BMO LILAC***/
+  --bmo-lilac: #6A88C3;
+  --bmo-lilac-lighter: #C9D6EC;
+  --bmo-lilac-light: #91ABD9;
+  --bmo-lilac-dark: #4D71A8;
+  --bmo-lilac-darker: #375B89;
+  /***BMO RETROSPECT***/
+  --bmo-retrospect: #00E7B4;
+  --bmo-retrospect-lighter: #8BFAE4;
+  --bmo-retrospect-light: #00F3C8;
+  --bmo-retrospect-dark: #00C196;
+  --bmo-retrospect-darker: #00977B;
+  /****BMO Orchid***/
+  --bmo-orchid: #D061A1;
+  --bmo-orchid-lighter: #f3d8e8;
+  --bmo-orchid-light: #e29dc5;
+  --bmo-orchid-dark: #b1357d;
+  --bmo-orchid-darker: #762353;
+  /**********THEME COLORS**********/
+  --brand-pri: var(--bmo-bluea);
+  --brand-pri-text: var(--bmo-bluea);
+  --brand-pri-over: var(--bmo-ultramarine);
+  --brand-dark-blue: var(--bmo-ultramarine);
+  --brand-black: var(--bmo-slate);
+  --brand-white: var(--bmo-white);
+  --brand-highlight: var(--bmo-cerulean);
+  --brand-grey: var(--bmo-grey);
+  --brand-dark-grey: var(--bmo-granite);
+  --brand-light-grey: var(--bmo-light-grey);
+  --brand-lightest-grey: var(--bmo-albicant);
+  /***THEME ICON FILTERS***/
+  --brand-pri-filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(1103%) hue-rotate(177deg) brightness(94%) contrast(102%);
+  --brand-pri-filter-over: brightness(0) saturate(100%) brightness(70%) invert(19%) sepia(33%) saturate(6007%) hue-rotate(185deg) brightness(95%) contrast(101%);
+  --brand-white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(350deg) brightness(105%) contrast(104%);
+  --brand-dark-grey-filter: invert(44%) sepia(18%) saturate(261%) hue-rotate(173deg) brightness(89%) contrast(89%);
+  /***FEEDBACK***/
+  --brand-negative: var(--bmo-negative);
+  --brand-negative-text: var(--bmo-negative);
+  --brand-positive: var(--bmo-positive);
+  --brand-positive-text: var(--bmo-positive-text);
+  --brand-warning: var(--bmo-warning);
+  /***FEEDBACK FILTERS***/
+  --brand-positive-filter: invert(23%) invert(28%) sepia(89%) saturate(1542%) hue-rotate(114deg) brightness(89%) contrast(91%);
+  --brand-negative-filter: invert(14%) sepia(96%) saturate(2849%) hue-rotate(349deg) brightness(108%) contrast(106%);
+  --brand-warning-filter: invert(39%) sepia(83%) saturate(893%) hue-rotate(7deg) brightness(104%) contrast(97%);
+  /***DISABLED***/
+  --brand-disabled: var(--bmo-disabled);
+  --disabled-bg: var(--bmo-disabled);
+  --disabled-text: var(--bmo-granite);
+  --disabled-icon-filter: invert(45%) sepia(12%) saturate(374%) hue-rotate(173deg) brightness(90%) contrast(93%);
+  --primary-disabled-icon-filter: invert(45%) sepia(12%) saturate(374%) hue-rotate(173deg) brightness(90%) contrast(93%); }
+
+/***NON COLOR GLOBALS***/
+:root {
+  /************GUTTER WIDTH*************/
+  --gutter-width: 32px;
+  --each-grid-gutter: calc(var(--gutter-width) / 2);
+  --md-each-grid-gutter: calc(var(--gutter-width) / 2.66);
+  --sm-each-grid-gutter: calc(var(--gutter-width) / 4);
+  --default-screen-max: 1280px;
+  /***ZINDEX STACK***/
+  --zindex-sticky: 1020;
+  --zindex-fixed: 1030;
+  --zindex-overlay: 1040;
+  --zindex-dropdown: 1045;
+  --zindex-modal: 1050;
+  --zindex-popover: 1060; }
+
+/********GRID SCREEN SIZES***********/
+/***CSS VARIABLES CANNOT BE USED IN MEDIA QUERIES, MUST KEEP SASS VARIABLES***/
+/**************FONTS*****************/
+/**************MIXINS*****************/
+.bread-crumb {
+  padding: 24px 0; }
+  .bread-crumb li {
+    display: inline-block; }
+    .bread-crumb li:first-child a {
+      padding-left: 0; }
+    .bread-crumb li:last-child a {
+      background-image: none; }
+      .bread-crumb li:last-child a:hover {
+        background-image: none;
+        color: var(--brand-black);
+        cursor: default; }
+    .bread-crumb li .bread-crumb-link {
+      padding: 8px 0;
+      padding-right: 32px;
+      padding-left: 8px;
+      font-size: 1.4rem;
+      background-image: url(~/assets/bmo-design-system/img/icons/16/16-breadcrumb-chevy.svg);
+      background-position: right center;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      color: var(--brand-pri);
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 24px;
+      /*&.last {
+				background-image: none;
+				&:hover {
+					background-image: none;
+		
+					cursor: default;
+				}
+			}*/ }
+      .bread-crumb li .bread-crumb-link:focus {
+        color: var(--brand-pri-dark); }
+      .bread-crumb li .bread-crumb-link.first-of-type {
+        padding-left: 0; }
+      .bread-crumb li .bread-crumb-link:hover {
+        color: var(--brand-pri-over);
+        background-image: url(~/assets/bmo-design-system/img/icons/16/16-breadcrumb-chevy-ultramarine.svg);
+        background-position: right center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat; }
+      .bread-crumb li .bread-crumb-link.active {
+        color: var(--brand-black); }
+/*# sourceMappingURL=breadcrumb.css.map */

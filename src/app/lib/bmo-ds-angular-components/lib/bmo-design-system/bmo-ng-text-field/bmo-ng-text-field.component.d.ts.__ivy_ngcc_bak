@@ -1,0 +1,27 @@
+import { OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { NgControl, ControlValueAccessor } from '@angular/forms';
+export declare class BmoNgTextFieldComponent implements OnInit, AfterViewInit, ControlValueAccessor {
+    private ngControl;
+    inputElement: ElementRef;
+    id: string;
+    placeholder: string;
+    helperText: string;
+    errorMessage: string;
+    type: 'email' | 'hidden' | 'number' | 'password' | 'text';
+    maxLength: number;
+    readonly: boolean;
+    autofocus: boolean;
+    mercury: boolean;
+    disabled: boolean;
+    value: string;
+    get error(): boolean;
+    onChange: (val: string) => void;
+    onTouched: () => void;
+    constructor(ngControl: NgControl);
+    writeValue(obj: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState?(isDisabled: boolean): void;
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+}

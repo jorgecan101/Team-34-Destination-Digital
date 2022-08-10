@@ -1,0 +1,27 @@
+import { AfterContentInit, OnDestroy, OnInit, QueryList } from '@angular/core';
+import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { BmoNgRadioButtonComponent } from './bmo-ng-radio-button.component';
+export declare class BmoNgRadioButtonContainerComponent implements OnInit, OnDestroy, AfterContentInit, ControlValueAccessor {
+    private ngControl;
+    radioGroupClass: boolean;
+    radioButtons: QueryList<BmoNgRadioButtonComponent>;
+    private radioGroupNum;
+    legend: string;
+    type: 'traditional' | 'box';
+    name: string;
+    errorMessage: string;
+    disabled: boolean;
+    get error(): boolean;
+    onChange: (val: string) => void;
+    onTouched: () => void;
+    constructor(ngControl: NgControl);
+    ngOnInit(): void;
+    ngAfterContentInit(): void;
+    ngOnDestroy(): void;
+    writeValue(obj: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState?(isDisabled: boolean): void;
+    private _clickListener;
+    private randomInterval;
+}

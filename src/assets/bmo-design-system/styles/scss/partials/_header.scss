@@ -1,0 +1,650 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/****************************************************************************************/
+
+
+/**********************************HEADER STYLES*****************************************/
+
+
+/****************************************************************************************/
+
+.bmo-header {
+    background: var(--brand-pri);
+    height: 80px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+    width: 100%;
+    .bmo-container {
+        max-width: 1280px;
+        width: auto;
+        margin: auto;
+    }
+    .bmo-logo {
+        padding-left: 16px;
+    }
+}
+
+.bmo-header .bmo-container .hidden-label:focus {
+    position: absolute;
+    background: var(--brand-pri);
+    color: var(--brand-white);
+    display: block;
+    z-index: var(--zindex-dropdown);
+    margin-top: 80px;
+    padding: 4px 8px;
+    ;
+    clip: auto;
+}
+
+.bmo-header .bmo-logo a {
+    width: 116px;
+    display: block;
+    float: left;
+    height: 80px;
+    padding: 20px 24px 20px 0;
+    box-sizing: border-box;
+}
+
+.bmo-header a {
+    font-size: 1.4rem;
+    color: var(--brand-white);
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+    padding: 24px 24px;
+}
+
+.bmo-header .primary-nav a:hover,
+.bmo-header .primary-nav a:focus {
+    background: var(--brand-white);
+    color: var(--brand-black);
+}
+
+.bmo-header .primary-nav a:focus {
+    border-radius: 4px;
+    box-shadow: var(--global-focus-shadow);
+}
+
+.bmo-header a.active {
+    background: var(--brand-white);
+    color: var(--brand-black);
+}
+
+.bmo-header nav ul {
+    margin: 0;
+}
+
+.bmo-header nav li {
+    display: block;
+    float: left;
+    height: 80px;
+}
+
+.bmo-header nav li a {
+    display: block;
+}
+
+.bmo-header .profile-menu-wrap {
+    float: right;
+}
+
+// here
+
+
+.bmo-header button.profile-menu-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    margin: 16px 0 16px 16px;
+    border-radius: 4px;
+    line-height: 40px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 2px solid rgba(0, 121, 193, 0);
+    color: var(--brand-white);
+    padding: 0 40px;
+    background-color: var(--brand-dark-blue);
+    cursor: pointer;
+    .icon.profile {
+        position: absolute;
+        left: 8px;
+    }
+    .icon.baby-chevy-down {
+        position: absolute;
+        right: 12px;
+        top: 14px;
+    }
+}
+
+.bmo-header button.profile-menu-button:hover {
+    background-color: var(--brand-dark-blue);
+}
+
+.bmo-header .profile-menu {
+    height: 46px;
+    width: 190px;
+    border-radius: 4px;
+    background-color: var(--brand-dark-blue);
+    box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+    position: absolute;
+    margin-top: -64px;
+    z-index: 2000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0s linear, height .3s ease-in, width .3s ease-in, margin .3s ease-in, background-color .3s ease-in;
+    -moz-transition: visibility 0s, opacity 0s linear, height .3s ease-in, width .3s ease-in, margin .3s ease-in, background-color .3s ease-in;
+    -webkit-transition: visibility 0s, opacity 0s linear, height .3s ease-in, width .3s ease-in, margin .3s ease-in, background-color .3s ease-in;
+    margin-left: 18px;
+    padding: 4px 16px 6px 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: var(--bmo-white);
+    margin-left: 44px;
+}
+
+.bmo-header .profile-menu.active {
+    background-color: var(--bmo-white);
+    height: 216px;
+    width: 285px;
+    visibility: visible;
+    opacity: 1;
+
+    z-index: var(--zindex-dropdown);
+    margin-left: -56px;
+}
+
+.bmo-header .profile-menu-header {
+    min-height: 50px;
+    border-bottom: 1px solid var(--bmo-light-grey);
+    padding-bottom: 8px;
+    .icon.profile {
+        position: absolute;
+        left: 16px;
+        top: 8px;
+    }
+    .icon.baby-chevy-down {
+        position: absolute;
+        right: 14px;
+        top: 12px;
+    }
+}
+
+.bmo-header .profile-menu-header h2 {
+    padding-left: 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.bmo-header .profile-menu-header h2 span.signed-in-to {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: -2px;
+    height: 24px;
+    line-height: 24px;
+    color: var(--bmo-granite);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bmo-header .profile-menu ul li {
+    width: 100%;
+    display: block;
+    height: 56px;
+    border-bottom: 1px solid var(--bmo-light-grey);
+    box-sizing: border-box;
+}
+
+.bmo-header .profile-menu ul li a {
+    color: var(--brand-dark-blue);
+    display: block;
+    text-align: left;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-indent: 24px;
+    line-height: 36px;
+    box-sizing: border-box;
+    height: 56px;
+}
+
+.bmo-header .profile-menu ul li a.sign-out {
+    color: var(--global-font-color);
+    position: relative;
+    .icon {
+        position: absolute;
+        left: 0px;
+        top: 12px;
+    }
+}
+
+.bmo-header .profile-menu ul li a.dash-settings-icon {
+    color: var(--global-font-color);
+    position: relative;
+    .icon {
+        position: absolute;
+        left: 0px;
+        top: 12px;
+    }
+}
+
+.bmo-header .profile-menu ul li a:hover {
+    color: var(--brand-black);
+}
+
+.bmo-header .profile-menu .sign-out-link {
+    border-top: 1px solid var(--bmo-light-grey);
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+.profile-nav span.last-login {
+    display: block;
+    text-align: center;
+    padding-bottom: 8px;
+    color: var(--bmo-grey);
+    clear: both;
+    font-size: 1.2rem;
+    padding-top: 12px;
+}
+
+nav.mobile-task-bar ul {
+    display: none;
+}
+
+.bmo-header {
+    .sub-nav-container {
+        position: absolute;
+        background: var(--brand-white);
+        left: 0;
+        width: 100%;
+        box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        &.expanded {
+            height: 64px;
+            visibility: visible;
+        }
+        .sub-nav {
+            position: absolute;
+            li {
+                &:first-of-type {
+                    margin-left: 112px;
+                }
+                a {
+                    color: var(--brand-black);
+                    border-bottom: 4px solid var(--brand-white);
+                    line-height: 12px;
+                    &.active {
+                        border-bottom: 4px solid var(--brand-pri);
+                    }
+                    &:hover {
+                        background-color: var(--brand-white);
+                        border-bottom: 4px solid var(--brand-pri);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $xl-screen-max) {
+    .bmo-header .profile-menu {
+        right: 16px;
+        margin-right: 0
+    }
+    .bmo-header .profile-menu.active {
+        right: 16px;
+        margin-right: 0
+    }
+    .bmo-header button.profile-menu-button {
+        margin-right: 16px;
+    }
+}
+
+@media only screen and (max-width: $md-screen-max) {
+    .bmo-header .profile-menu {
+        right: 16px;
+        margin-right: 0
+    }
+    .bmo-header .profile-menu.active {
+        right: 16px;
+        margin-right: 0
+    }
+    .primary-nav,
+    .profile-menu-wrap {
+        display: none;
+    }
+    .bmo-header {
+        background-color: var(--brand-pri);
+        z-index: 999;
+    }
+    .bmo-header,
+    .bmo-header .bmo-container {
+        //background: rgba(0,121,193,0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    .bmo-header {
+        height: 64px;
+        //overflow-x: hidden;
+        .bmo-logo {
+            padding-left: 16px;
+        }
+    }
+    .bmo-header .bmo-logo a {
+        width: 96px;
+        display: block;
+        float: left;
+        height: 56px;
+        padding: 16px 24px 16px 0;
+        box-sizing: border-box;
+    }
+    nav.mobile-task-bar ul {
+        display: block;
+        height: 56px;
+        width: 88px;
+        float: right;
+        padding: 8px 0 0 0;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0px;
+        right: 16px;
+    }
+    nav.mobile-task-bar ul li {
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        margin-right: 8px;
+    }
+    nav.mobile-task-bar ul li a {
+        width: 36px;
+        height: 36px;
+        box-sizing: border-box;
+        &.user-menu-trigger {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon {
+                position: absolute;
+            }
+            &:hover {
+                .icon{
+                    filter: var(--brand-white-filter);
+                }
+            }
+        }
+    }
+    nav.mobile-task-bar ul li a.contact {
+        background: url(~/assets/bmo-design-system/img/icons/24/24-profile.svg) no-repeat center center;
+        filter: var(--brand-white-filter);
+        background-size: 24px 24px;
+    }
+    nav.mobile-task-bar ul li a.mobile-menu-button {
+        background: url(~/assets/bmo-design-system/img/icons/24/24-hamburger-menu.svg) no-repeat center center;
+        background-size: 24px 24px;
+    }
+    nav.mobile-task-bar ul li a.mobile-menu-button.active {
+        background: url(~/assets/bmo-design-system/img/icons/24/24-close.svg);
+        filter: var(--brand-white-filter);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    nav.mobile-task-bar ul li ul.mobile-nav-list {
+        padding: 0 16px;
+    }
+    nav.mobile-task-bar ul li ul.mobile-nav-list.first-drawer,
+    nav.mobile-task-bar ul li ul.mobile-nav-list.first-drawer ul.mobile-nav-list.second-drawer {
+        position: fixed;
+        right: -100%;
+        height: calc(100vh - 64px);
+        top: 64px;
+        background-color: var(--brand-white);
+        width: 100%;
+        transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+    }
+    nav.mobile-task-bar ul li ul.mobile-nav-list.first-drawer.active,
+    nav.mobile-task-bar ul li ul.mobile-nav-list.first-drawer ul.mobile-nav-list.second-drawer.active {
+        display: block;
+        right: 0;
+        width: 100%;
+        background-color: var(--brand-white);
+        max-width: 400px;
+        z-index: var(--zindex-dropdown);
+    }
+    nav.mobile-task-bar ul li ul li {
+        display: block;
+        width: 100%;
+        clear: both;
+        border-bottom: 1px solid #D9DCE1;
+        height: 64px;
+    }
+    nav.mobile-task-bar ul li ul li a.mobile-menu-expandable {
+        position: relative;
+        .icon{
+            position: absolute;
+            right: 0px;
+            top: 24px;
+        }
+    }
+    nav.mobile-task-bar ul li ul li ul li a.drawer-header-back {
+        text-align: right;
+        color: var(--global-font-color);
+        position: relative;
+        .icon{
+            position: absolute;
+            left: 0px;
+            top: 24px;
+        }
+    }
+    nav.mobile-task-bar ul li ul li a {
+        color: var(--brand-black);
+        width: 100%;
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 16px 0;
+        height: 100%;
+        clear: both;
+        display: block;
+        box-sizing: border-box;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar {
+        position: fixed;
+        background: var(--brand-white);
+        height: 36px;
+        bottom: 0;
+        width: 100%;
+        max-width: 480px;
+        transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        margin-left: 100%;
+        padding-bottom: 16px;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar.active {
+        left: 0;
+        margin-left: 0;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar ul {
+        width: 100%;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar ul li {
+        display: inline-block;
+        width: 33.3333%;
+        margin-right: 0;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar ul li a {
+        display: inline-block;
+        width: 100%;
+        padding: 8px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 16px;
+        box-sizing: border-box;
+        height: 48px;
+        text-align: left;
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar ul li a.active {
+        color: var(--brand-black);
+    }
+    nav.mobile-task-bar .mobile-menu-fixed-nav-bar ul li a.mobile-menu-fixed-nav-contact {
+        text-align: right;
+    }
+    .mobile-menu-fixed-nav-bar ul {
+        float: left;
+    }
+    .mobile-menu-fixed-nav-bar ul li {
+        display: inline-block;
+    }
+    .mobile-menu-fixed-nav-bar ul li a {
+        color: var(--brand-pri);
+    }
+    .bmo-header .user-setting-menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: var(--bmo-albicant);
+        right: -400px;
+        max-width: 400px;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        &.active {
+            top: 0;
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            overflow: hidden;
+            border-left: 1px solid var(--bmo-light-grey);
+        }
+    }
+    .bmo-header .user-setting-menu .profile-image {
+        margin: 48px auto 24px;
+        display: block;
+    }
+    .bmo-header .user-setting-menu-header {
+        background: var(--bmo-bluea);
+        color: #fff;
+        height: 64px;
+        box-sizing: border-box;
+    }
+    .bmo-header .user-setting-menu ul.user-setting-menu-list {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-top: 16px;
+        position: static;
+        display: block;
+        padding: 0;
+    }
+    .bmo-header .user-setting-menu ul.user-setting-menu-list li {
+        display: block;
+        width: 100%;
+        height: 56px;
+    }
+    .bmo-header .user-setting-menu ul.user-setting-menu-list li a {
+        display: block;
+        background: var(--bmo-white);
+        border-top: 1px solid var(--bmo-light-grey);
+        padding: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        color: var(--global-font-color);
+        font-size: 1.6rem;
+        text-align: left;
+        height: 56px;
+        padding-left: 88px;
+        line-height: 24px
+    }
+    .bmo-header .user-setting-menu ul.user-setting-menu-list li a.settings {
+        position: relative;
+        .icon {
+            position: absolute;
+            left: 48px;
+            top: 16px;
+        }
+    }
+    .bmo-header .user-setting-menu ul.user-setting-menu-list li a.sign-out {
+        position: relative;
+        .icon {
+            position: absolute;
+            left: 48px;
+            top: 16px;
+        }
+    }
+    .bmo-header .user-setting-menu-header-back {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        left: 8px;
+        top: 10px;
+        background-image: url(~/assets/bmo-design-system/img/icons/24/24-arrow-left.svg);
+        filter: var(--brand-white-filter);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px 24px;
+        padding: 0;
+        cursor: pointer;
+    }
+    .bmo-header .user-setting-menu-header-title {
+        text-align: center;
+        color: var(--bmo-white);
+        display: block;
+        height: 24px;
+        font-size: 1.6rem;
+        line-height: 24px;
+        text-align: center;
+        font-family: var(--global-font);
+        font-weight: 500;
+        padding-top: 20px;
+    }
+    .bmo-header .user-setting-menu-name {
+        height: 24px;
+        color: var(--bmo-slat);
+        font-family: var(--global-font);
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 24px;
+        text-align: center;
+        display: block;
+    }
+    .bmo-header .user-setting-signed-in {
+        height: 24px;
+        color: var(--bmo-granite);
+        font-size: 1.4rem;
+        line-height: 24px;
+        text-align: center;
+        display: block;
+    }
+    .bmo-header .user-setting-last-login {
+        height: 24px;
+        color: var(--bmo-granite);
+        font-family: var(--global-font);
+        font-size: 1.4rem;
+        line-height: 24px;
+        margin-left: 16px;
+        margin-top: 72px;
+        display: inline-block
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: var(--zindex-overlay);
+    top: 0;
+    left: 0;
+    display: none;
+}

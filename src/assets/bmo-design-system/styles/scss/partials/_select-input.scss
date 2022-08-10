@@ -1,0 +1,337 @@
+:root {
+    --select-input-font-size: 1.8rem;
+    --select-input-width: 100%;
+    --select-input-height: 36px;
+    --select-input-line-height: 40px;
+    --select-input-padding: 0;
+    --select-input-margin: 7px 0 0 0;
+    --select-input-border: none;
+    --select-input-error-border: none;
+    --select-input-border-radius: none;
+    --select-input-color: var(--global-font-color);
+    --select-input-bg-color: transparent;
+    --select-input-focus: unset;
+    --help-text-font-size: 1.6rem;
+    --help-text-line-height: 16px;
+    --help-text-color: var(--brand-dark-grey);
+    --help-text-margin: 8px 0 0 0;
+    --label-font-size: 1.8rem;
+    --label-active-font-size: 1.4rem;
+    --label-color: var(--brand-pri);
+    --label-padding: 18px 0 0 0;
+    --label-height: 42px;
+    --error-message-font-size: 1.4rem;
+    --error-message-line-height: 16px;
+    --error-message-color: var(--brand-negative);
+    --error-message-margin: 10px 0 6px 0;
+    --error-message-padding: 0px 32px 0px 19px;
+    --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+}
+
+.form-field.mercury {
+    --select-input-font-size: 1.6rem;
+    --select-input-width: 100%;
+    --select-input-height: 32px;
+    --select-input-line-height: 32px;
+    --select-input-padding: 0 0 0 8px;
+    --select-input-margin: 7px 0 0 0;
+    --select-input-border: 1px solid var(--brand-dark-grey);
+    --select-input-error-border: 1px solid var(--brand-negative);
+    --select-input-border-radius: 4px;
+    --select-input-color: var(--global-font-color);
+    --select-input-bg-color: transparent;
+    --select-input-focus: var(--global-focus-shadow);
+    --label-font-size: 1.4rem;
+    --label-active-font-size: 1.4rem;
+    --help-text-line-height: 16px;
+    --help-text-color: var(--brand-dark-grey);
+    --help-text-margin: 8px 0 0 0;
+    --label-font-size: 1.4rem;
+    --label-active-font-size: 1.4rem;
+    --label-color: var(--global-font-color);
+    --label-padding: 18px 0 0 0;
+    --label-height: 42px;
+    --error-message-font-size: 1.4rem;
+    --error-message-line-height: 16px;
+    --error-message-color: var(--brand-negative);
+    --error-message-margin: 8px 0 6px 0;
+    --error-message-padding: 0px 32px 0px 19px;
+    --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+}
+
+.form-field {
+    .select {
+        font-family: var(--global-font);
+        font-size: var(--select-input-font-size);
+        color: var(--global-font-color);
+        line-height: var(--select-input-line-height);
+        height: var(--select-input-height);
+        margin: var(--select-input-margin);
+        padding: var(--select-input-padding);
+        border: var(--select-input-border);
+        background-color: var(--select-input-bg-color);
+        border-radius: var(--select-input-border-radius);
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: var(--select-bg-position);
+        background-size: 16px 16px;
+        appearance: none;
+        width: var(--select-input-width);
+        white-space: nowrap;
+        transition: all 0.3s ease-out;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-margin-start: 0px;
+        position: relative;
+        //top: -10px;
+        &:focus {
+            box-shadow: var(--select-input-focus);
+        }
+        &:disabled {
+            color: var(--brand-dark-grey);
+            cursor: default;
+        }
+        &:focus+.slide-label {
+            .label-text {
+                padding: 0px;
+                font-size: 14px;
+                margin-top: -4px;
+            }
+            &:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+        &:disabled {
+            color: var(--brand-disabled-text);
+        }
+        &:first-letter {
+            text-transform: capitalize;
+        }
+         :focus+label.slide-label:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        &::-ms-expand {
+            display: none;
+        }
+        &:focus::-ms-value {
+            color: #3d3c4c;
+            background-color: transparent;
+        }
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+        option {
+            color: var(--brand-black);
+            background-color: var(--global-bg-color);
+            font-size: 1.6rem;
+            padding-left: 8px;
+            font-family: 'heebo';
+        }
+    }
+    .slide-label {
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        pointer-events: none;
+        height: 42px;
+        cursor: pointer;
+        border-radius: 4px 0px 0px 4px;
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-light-grey);
+            top: 44px;
+        }
+        .label-text {
+            display: block;
+            padding: 18px 0px 0px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: var(--label-font-size);
+            color: var(--brand-pri-text);
+            transition: 0.3s ease-out;
+        }
+        &.active-label {
+            &:after {
+                background: var(--brand-grey);
+            }
+            .label-text {
+                padding: 0px;
+                font-size: var(--label-active-font-size);
+                margin-top: -4px;
+            }
+        }
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-light-grey);
+            top: 44px;
+        }
+        &.error-field {
+            &:before {
+                background-color: var(--brand-negative);
+            }
+            &:after {
+                background-color: var(--brand-negative);
+            }
+        }
+        &.disabled {
+            span.label-text {
+                color: var(--brand-dark-grey);
+            }
+            &+.icon {
+                filter: var(--disabled-icon-filter);
+            }
+        }
+        &+.icon {
+            position: absolute;
+            right: 8px;
+            top: 18px;
+            pointer-events: none;
+        }
+        .error-message {
+            &.select-error {
+                margin: var(--error-message-margin);
+                padding-bottom: var(--error-message-padding);
+                background-size: 16px 16px;
+                background-image: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg);
+                background-repeat: no-repeat;
+                background-position: left top;
+            }
+        }
+        .input-helper-text.select-helper {
+            position: relative;
+            //top: -8px;
+            margin: var(--help-text-margin);
+        }
+    }
+    &.mercury {
+        .select {
+            &:focus+.slide-label.select-label {
+                margin-top: 18px;
+                .label-text {
+                    margin-top: unset;
+                    font-size: var(--label-font-size);
+                }
+            }
+            &:focus+.slide-label.select-label.active-label {
+                margin-top: -4px;
+                .label-text {
+                    margin-top: unset;
+                    font-size: var(--label-active-font-size);
+                }
+            }
+            &.error {
+                border: var(--select-input-error-border);
+            }
+        }
+        .slide-label.select-label {
+            position: absolute;
+            transition: unset;
+            top: -32px;
+            color: var(--label-color);
+            font-size: var(--label-font-size);
+            /***************KILL MATERIAL ANIMATIONS********/
+            &:before {
+                z-index: unset;
+                content: "";
+                position: unset;
+                width: unset;
+                height: unset;
+                bottom: unset;
+                left: unset;
+                background: unset;
+                transform: unset;
+                transition: unset;
+                top: unset;
+            }
+            &:after {
+                z-index: unset;
+                content: "";
+                position: unset;
+                width: unset;
+                height: unset;
+                bottom: unset;
+                left: unset;
+                background: unset;
+                top: unset;
+            }
+            &.active-label {
+                transition: none;
+                top: -10px;
+                &:after {
+                    // background: var(--brand-grey);
+                    background: var(--bmo-granite);
+                }
+                .label-text {
+                    transition: none;
+                    padding: 0px;
+                    font-size: var(--select-input-font-size);
+                    color: var(--label-color);
+                }
+            }
+            &+.icon {
+                position: absolute;
+                right: 8px;
+                top: 16px;
+                pointer-events: none;
+            }
+            .label-text {
+                color: var(--label-color);
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .select {
+        height: 55px;
+        font-family: 'heebo';
+    }
+    .error-message.select-error {
+        margin-top: -16px;
+    }
+}

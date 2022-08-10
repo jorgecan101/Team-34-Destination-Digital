@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar / S</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    </defs>
+    <g id="PROFILE-LETTERS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar-/-S">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="circle" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(29.000000, 24.000000)">
+                    <path d="M14.611685,6.43258537 C14.611685,6.43258537 14.1322619,0 7.62630038,0 C1.12033884,0 0.161781146,4.27609756 0.161781146,4.27609756 C0.161781146,4.27609756 -1.4818727,9.13990244 5.70889653,11.3637073 L9.03976192,12.630439 C16.2302427,14.8536585 14.5868773,19.7180488 14.5868773,19.7180488 C14.5868773,19.7180488 13.6283196,23.993561 7.12206961,23.993561 C0.616108069,23.993561 0.136684992,17.5612683 0.136684992,17.5612683" id="Stroke-249" stroke="#73C3EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.03964653,12.6303805 C16.2307042,14.8538927 14.5867619,19.7179902 14.5867619,19.7179902 C14.5867619,19.7179902 13.6282042,23.9935024 7.12224268,23.9935024 C0.616281146,23.9935024 0.137146531,17.5615024 0.137146531,17.5615024" id="Stroke-251" stroke="#0079C1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7.9395,13.5605 C7.3535,12.9745 7.3535,12.025 7.9395,11.4395 C8.5255,10.8535 9.4745,10.8535 10.0605,11.4395 C10.6465,12.025 10.6465,12.9745 10.0605,13.5605 C9.4745,14.1465 8.5255,14.1465 7.9395,13.5605" id="Fill-313" stroke="none" fill="#231F20" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+export declare class BmoNgTabPanelComponent {
+    set active(val: boolean);
+    tabPanelClass: boolean;
+    id: string;
+    roleAttribute: string;
+    ariaDescribedByAttribute: string;
+    activeTabContentClass: boolean;
+    ariaHiddenAttribute: boolean;
+    get tabId(): number;
+    set tabId(val: number);
+    private _tabId;
+    displayTabPanel(): void;
+    hideTabPanel(): void;
+}

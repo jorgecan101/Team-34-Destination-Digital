@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Loading</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../styles/css/global.css">
+    <link rel="stylesheet" href="../../fonts/heebo.css">
+</head>
+
+<body class="scrollbar">
+    <div class="bmo-container">
+        <div class="panel-content">
+            <div class="row pb-1u">
+                <div class="grid col-100">
+                    <h1 class="display-2 light">Loading animtions</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="grid col-20">
+                    <h2 class="headline-1 medium">Page/Section Loading</h2>
+                    <div class="bmo-loading ultramarine">
+                        <img src="~/assets/bmo-design-system/img/loading.svg"/>
+                    </div>
+                    <span class="bmo-loading-text">Loading your profile</span>
+                </div>
+                <div class="grid col-50">
+                    <h2 class="headline-1 medium">Loading Stencils</h2>
+                    <div class="bmo-card no-pad hover">
+                        <div class="card-initial">
+                            <div class="grid col-50">
+                                <div class="stencil tall stencil-100 mt-1u"></div>
+                                <div class="stencil stencil-80 mt-1hu"></div>
+                                <div class="stencil stencil-20 mt-1u"></div>
+                            </div>
+                            <div class="grid col-50 mb-1u">
+                                <div class="stencil float-right stencil-30 mt-1u"></div>
+                                <div class="stencil float-right stencil-40 mt-1u"></div>
+                                <div class="stencil float-right stencil-50 mt-1u"></div>
+                                <div class="stencil float-right stencil-60 mt-1u"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+                <div class="grid col-30">
+                    <h2 class="headline-1 medium">Button With Loading</h2>
+                    <button onclick="pressButton()" type="button" class="primary loading-and-checkmark">
+                        <span id="button-text" class="loading-and-checkmark-text">Loading Animation</span>
+                        <span id="spinner" class="hide-me">
+                            <div class="loader" role="presentation"></div>      
+                        </span>
+                        <span id="success1" class="success hide-me">
+                        <img src="~/assets/bmo-design-system/img/icons/24/24-checkmark.svg" role="presentation" width="">
+                        </span>
+                    </button>	
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bmo-overlay-dark"></div>
+    <script type="module" src="../../js/core.js"></script>
+</body>
+
+</html>
+<script>
+function pressButton() {
+document.getElementById("button-text").className = "send-code-text fade-out";
+setTimeout(function() {
+document.getElementById("spinner").className = "fade-in";
+
+setTimeout(function() {
+   document.getElementById("spinner").className = "fade-out";
+  
+     setTimeout(function() { 
+     document.getElementById("spinner").style.display = "none";
+     document.getElementById("success1").className = "fade-in";
+     },500)
+}, 2000)
+}, 300);
+}
+
+</script>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Checkboxes</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="../../styles/css/global.css">
+      <link rel="stylesheet" href="../../fonts/heebo.css">
+   </head>
+   <body class="scrollbar">
+      <div class="bmo-container">
+      <div class="pb-1u grid col-100">
+         <h2 class="title-1 bold mt-3u">Checkboxes</h2>
+      </div>
+      <div class="row">
+         <div class="grid col-25 sm-col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox">
+                  <legend class="legend check-legend">Life savers in lockdown</legend>
+                  <input type="checkbox" class="check" checked="checked" value="Flowers" name="life-savers-in-lockdown" id="flowers-9070">
+                  <label class="check-label active-label" for="flowers-9070">Flowers</label>
+                  <input type="checkbox" class="check" value="Pizza" name="life-savers-in-lockdown" id="pizza-6190">
+                  <label class="check-label active-label" for="pizza-6190">Pizza</label>
+                  <input type="checkbox" class="check" value="Video Games" name="life-savers-in-lockdown" id="video-games-2441">
+                  <label class="check-label active-label" for="video-games-2441">Video Games</label>
+                  <input type="checkbox" class="check" value="Movies" name="life-savers-in-lockdown" id="movies-957">
+                  <label class="check-label active-label" for="movies-957">Movies</label>
+                  <input type="checkbox" class="check" value="Dog Walks" name="life-savers-in-lockdown" id="dog-walks-6663">
+                  <label class="check-label active-label" for="dog-walks-6663">Dog Walks</label>
+                  <span class="error-message" role="alert">This is an error message</span>
+               </fieldset>
+            </div>
+         </div>
+         <div class="grid col-25 sm-col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox">
+                  <legend class="legend check-legend">Things I don't miss (error)</legend>
+                  <input type="checkbox" class="check" value="The office" name="things-i-don't-miss-(error)" id="the-office-5005">
+                  <label class="check-label active-label" for="the-office-5005">The office</label>
+                  <input type="checkbox" class="check" value="Crowds" name="things-i-don't-miss-(error)" id="crowds-1142">
+                  <label class="check-label active-label" for="crowds-1142">Crowds</label>
+                  <input type="checkbox" class="check" value="Traffic" name="things-i-don't-miss-(error)" id="traffic-5263">
+                  <label class="check-label active-label" for="traffic-5263">Traffic</label>
+                  <input type="checkbox" class="check" value="Meetings" name="things-i-don't-miss-(error)" id="meetings-2614">
+                  <label class="check-label active-label" for="meetings-2614">Meetings</label>
+                  <span class="error-message has-error" role="alert">Please choose at least one</span>
+               </fieldset>
+            </div>
+         </div>
+         <div class="grid col-25 sm-col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox" disabled="">
+                  <legend class="legend check-legend">Things I don't miss (disabled)</legend>
+                  <input type="checkbox" class="check" value="The office" name="things-i-don't-miss-(disabled)" id="the-office-1645">
+                  <label class="check-label active-label" for="the-office-1645">The office</label>
+                  <input type="checkbox" class="check" value="Crowds" name="things-i-don't-miss-(disabled)" id="crowds-5319">
+                  <label class="check-label active-label" for="crowds-5319">Crowds</label>
+                  <input type="checkbox" class="check" checked="checked" value="Traffic" name="things-i-don't-miss-(disabled)" id="traffic-4046">
+                  <label class="check-label active-label" for="traffic-4046">Traffic</label>
+                  <input type="checkbox" class="check" value="Meetings" name="things-i-don't-miss-(disabled)" id="meetings-5486">
+                  <label class="check-label active-label" for="meetings-5486">Meetings</label>
+                  <span class="error-message" role="alert">Please Choose at least one</span>
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div  class="pb-1u grid col-100">
+            <h2 class="title-1 bold mt-3u">Parent-child checkboxes</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="grid col-100">
+            <div class="input-wrap input-checkbox parent-checkbox">
+               <input aria-controls="checkboxChild1 checkboxChild2 checkboxChild3" type="checkbox" name="parentCheckbox" id="parentCheckbox1">
+               <label for="parentCheckbox1">Checkbox Label</label>
+            </div>
+            <ul class="checkboxes">
+               <li>
+                  <div class="input-wrap input-checkbox">
+                     <input type="checkbox" name="checkboxChildInput" id="checkboxChild1" checked>
+                     <label for="checkboxChild1">Checkbox Label</label>
+                  </div>
+               </li>
+               <li>
+                  <div class="input-wrap input-checkbox">
+                     <input type="checkbox" name="checkboxChildInput" id="checkboxChild2" checked>
+                     <label for="checkboxChild2">Checkbox Label</label>
+                  </div>
+               </li>
+               <li>
+                  <div class="input-wrap input-checkbox">
+                     <input type="checkbox" name="checkboxChildInput" id="checkboxChild3" >
+                     <label for="checkboxChild3">Checkbox Label</label>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="row">
+         <div  class="pb-1u grid col-100">
+            <h2 class="title-1 bold mt-3u">Card Checkboxes
+            </h2>
+         </div>
+      </div>
+      <div class="row">
+         <div  class="grid col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox">
+                  <legend class="legend check-legend">Flicks I want to see</legend>
+                  <div class="check-card-wrap">
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" checked="checked" value="King of Staten Island" id="king-of-staten-island-1786">
+                        <label class="card-check-label active-label" for="king-of-staten-island-1786">
+                        <span class="check" name="flicks-i-want-to-see"></span>
+                        <span class="card-check-label-text">King of Staten Island</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Da 5 Bloods" id="da-5-bloods-7779">
+                        <label class="card-check-label active-label" for="da-5-bloods-7779">
+                        <span class="check" name="flicks-i-want-to-see"></span>
+                        <span class="card-check-label-text">Da 5 Bloods</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Many Saints of Newark" id="many-saints-of-newark-2157">
+                        <label class="card-check-label active-label" for="many-saints-of-newark-2157">
+                        <span class="check" name="flicks-i-want-to-see"></span>
+                        <span class="card-check-label-text">Many Saints of Newark</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Die Hard in Scarborough" id="die-hard-in-scarborough-1310">
+                        <label class="card-check-label active-label" for="die-hard-in-scarborough-1310">
+                        <span class="check" name="flicks-i-want-to-see"></span>
+                        <span class="card-check-label-text">Die Hard in Scarborough</span>
+                        </label>
+                     </div>
+                  </div>
+                  <span class="error-message" role="alert">This is an error message</span>
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div  class="grid col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox">
+                  <legend class="legend check-legend">Cards with Images (Error)</legend>
+                  <div class="check-card-wrap">
+                     <div class="bmo-card-checkbox check-fixed-cards"><input type="checkbox" class="card-check-input" value="Employment" id="employment-3452">
+                        <label class="card-check-label active-label" for="employment-3452">
+                        <span class="check" name="cards-with-images-(error)"></span>
+                        <span class="card-check-image">
+                        <img src="/assets/img/financial-employment.svg" role="presentation">
+                        </span>
+                        <span class="card-check-label-text">Employment</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Gift" id="gift-3992">
+                        <label class="card-check-label active-label" for="gift-3992">
+                        <span class="check" name="cards-with-images-(error)"></span>
+                        <span class="card-check-image">
+                        <img src="/assets/img/financial-gift.svg" role="presentation">
+                        </span>
+                        <span class="card-check-label-text">Gift</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Investment" id="investment-7811">
+                        <label class="card-check-label active-label" for="investment-7811">
+                        <span class="check" name="cards-with-images-(error)"></span>
+                        <span class="card-check-image">
+                        <img src="/assets/img/financial-investment.svg" role="presentation">
+                        </span>
+                        <span class="card-check-label-text">Investment</span>
+                        </label>
+                     </div>
+                  </div>
+                  <span class="error-message has-error" role="alert">Please choose one</span>
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div  class="grid col-100">
+            <div class="check-group">
+               <fieldset class="input-wrap input-checkbox" disabled="">
+                  <legend class="legend check-legend">Cards with Images (disabled)</legend>
+                  <div class="check-card-wrap">
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" checked="checked" value="Employment" id="employment-6332">
+                        <label class="card-check-label active-label" for="employment-6332">
+                        <span class="check" name="cards-with-images-(disabled)"></span>
+                        <span class="card-check-image">
+                        <img src="/assets/img/financial-employment.svg" role="presentation">
+                        </span>
+                        <span class="card-check-label-text">Employment</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Gift" id="gift-9055">
+                        <label class="card-check-label active-label" for="gift-9055">
+                        <span class="check" name="cards-with-images-(disabled)"></span>
+                        <span class="card-check-image"><img src="/assets/img/financial-gift.svg" role="presentation"></span>
+                        <span class="card-check-label-text">Gift</span>
+                        </label>
+                     </div>
+                     <div class="bmo-card-checkbox check-fixed-cards">
+                        <input type="checkbox" class="card-check-input" value="Investment" id="investment-4342">
+                        <label class="card-check-label active-label" for="investment-4342">
+                        <span class="check" name="cards-with-images-(disabled)"></span>
+                        <span class="card-check-image"><img src="/assets/img/financial-investment.svg" role="presentation"></span>
+                        <span class="card-check-label-text">Investment</span>
+                        </label>
+                     </div>
+                  </div>
+                  <span class="error-message" role="alert">This is an error message</span>
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      <div class="bmo-overlay-light"></div>
+      <script type="module" src="../../js/core.js"></script>
+      <script type="module">
+         import('./parentChildCheckbox.js').then(module => {
+             var parentCheckboxes = document.querySelectorAll('.parent-checkbox [type="checkbox"]');
+             var checkbox = null;
+             [].forEach.call(parentCheckboxes, function(parentCheckbox) {
+                 checkbox = new module.CheckboxMixed(parentCheckbox);
+                 checkbox.init();
+             });
+         });
+      </script>
+   </body>
+</html>

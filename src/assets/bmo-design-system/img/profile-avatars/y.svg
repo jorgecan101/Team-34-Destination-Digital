@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar / Y</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    </defs>
+    <g id="PROFILE-LETTERS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar-/-Y">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="circle" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(28.000000, 24.000000)">
+                    <path d="M7.77906977,23.993561 L7.875,14.7313171" id="Stroke-269" stroke="#0079C1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.2245075,14.7371707 L16.4398575,0" id="Stroke-271" stroke="#73C3EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.217,14.7371707 L0,0" id="Stroke-273" stroke="#005587" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.9395,16.0608933 C6.3535,15.4749177 6.3535,14.5254573 6.9395,13.9394817 C7.525,13.3535061 8.4745,13.3535061 9.0605,13.9394817 C9.6465,14.5254573 9.6465,15.4749177 9.0605,16.0608933 C8.4745,16.6463689 7.525,16.6463689 6.9395,16.0608933" id="Fill-323" stroke="none" fill="#231F20" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

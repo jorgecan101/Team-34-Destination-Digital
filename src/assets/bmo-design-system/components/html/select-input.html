@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Select Input</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../styles/css/global.css">
+    <link rel="stylesheet" href="../../fonts/heebo.css">
+</head>
+
+<body class="scrollbar">
+    <div class="bmo-container">
+        <div class="row">
+            <div class="pb-1u grid col-100">
+                <h2 class="title-1 bold">Select Inputs</h2>
+            </div>
+            <div class="grid col-33 sm-col-100">
+
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <select class="select" name="choose-a-gift" id="choose-a-gift" aria-describedby="error-choose-a-gift">
+                            <option value="Flowers">Flowers</option>
+                            <option value="Stuffed Toy">Stuffed Toy</option>
+                            <option value="Chocolates">Chocolates</option>
+                            <option value="A Smile">A Smile</option>
+                        </select>
+                        <label class="slide-label" for="choose-a-gift">
+                            <span class="label-text">Choose a gift</span>
+                        </label>
+                        <span class="icon small baby-chevy-down" title="Baby chevy down" role="presentation"></span>
+                        <span class="error-message select-error" role="alert" id="error-choose-a-gift">This is an error</span>
+                        <span class="input-helper-text select-helper" id="helper-choose-a-gift">Text input helper text</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid col-33 sm-col-100">
+
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <select class="select error" name="choose-another-gift" id="choose-another-gift" aria-describedby="error-choose-another-gift">
+                            <option value="Carrots">Carrots</option>
+                            <option value="Coal">Coal</option>
+                            <option value="Socks">Socks</option>
+                            <option value="A Tie">A Tie</option>
+                        </select>
+                        <label class="slide-label error-field" for="choose-another-gift">
+                            <span class="label-text">Choose another gift</span>
+                        </label>
+                        <span icon="baby-chevy-down" class="icon small baby-chevy-down" title="Baby chevy down" role="presentation"></span>
+                        <span class="error-message select-error error" role="alert" id="error-choose-another-gift">This is not a good gift</span>
+                        <span class="input-helper-text select-helper" id="helper-choose-another-gift"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid col-33 sm-col-100">
+
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <select class="select" name="disabled-select" id="disabled-select" aria-describedby="error-disabled-select" disabled="">
+                        <option value="Flowers">Flowers</option>
+                        <option value="Stuffed Toy">Stuffed Toy</option>
+                        <option value="Chocolates">Chocolates</option>
+                        <option value="A Smile">A Smile</option>
+                    </select>
+                        <label class="slide-label disabled" for="disabled-select">
+                            <span class="label-text">Disabled Select</span>
+                        </label>
+                        <span class="icon small baby-chevy-down" title="Baby chevy down" role="presentation"></span>
+                        <span class="error-message select-error" role="alert" id="error-disabled-select">This is an error</span>
+                        <span class="input-helper-text select-helper" id="helper-disabled-select">Please enter your phone number</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="bmo-overlay-dark"></div>
+    <script type="module" src="../../js/core.js"></script>
+</body>
+
+</html>

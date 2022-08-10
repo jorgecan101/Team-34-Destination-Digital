@@ -1,0 +1,17 @@
+import { OnInit, ElementRef, AfterViewInit, AfterViewChecked } from '@angular/core';
+export declare class BmoNgPopoverComponent implements OnInit, AfterViewInit, AfterViewChecked {
+    icon: string;
+    direction: 'top' | 'left' | 'right' | 'bottom';
+    title: string;
+    containerStyle: any;
+    buttonStyle: any;
+    popoverButton: ElementRef;
+    popoverContent: ElementRef;
+    isActive: boolean;
+    constructor();
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngAfterViewChecked(): void;
+    displayPopover(): void;
+    closePopover(): void;
+}

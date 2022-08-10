@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar / X</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    </defs>
+    <g id="PROFILE-LETTERS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar-/-X">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="circle" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(28.000000, 24.000000)">
+                    <path d="M0,0 L15.50325,23.9938537" id="Stroke-265" stroke="#73C3EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M15.5527382,0 L0.0458960526,23.9938537" id="Stroke-267" stroke="#0079C1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.9395,13.0605 C6.3535,12.4745 6.3535,11.525 6.9395,10.9395 C7.5255,10.3535 8.475,10.3535 9.0605,10.9395 C9.6465,11.525 9.6465,12.4745 9.0605,13.0605 C8.475,13.6465 7.5255,13.6465 6.9395,13.0605" id="Fill-321" stroke="none" fill="#231F20" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

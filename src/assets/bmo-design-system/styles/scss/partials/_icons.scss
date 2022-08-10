@@ -1,0 +1,534 @@
+@import "variables";
+$icon-small: "~/assets/bmo-design-system/img/icons/16";
+$icon-med: "~/assets/bmo-design-system/img/icons/24";
+$icon-large: "~/assets/bmo-design-system/img/icons/48";
+a:hover>.icon,
+button:hover>.icon.blue,
+.button:hover>.icon.blue {
+    filter: var(--brand-pri-filter-over)
+}
+
+a.button.primary:focus>.icon.white,
+a.button.primary:hover>.icon.white,
+a.button.tertiary:focus>.icon.white,
+a.button.tertiary:hover>.icon.white {
+    color: var(--brand-white)!important;
+    filter: var(--brand-white-filter);
+}
+
+a:focus>.icon,
+button:focus>.icon.blue,
+.button:focus>.icon.blue {
+    filter: var(--brand-pri-filter-over);
+}
+
+a:focus>.icon.white,
+button:focus>.icon.white,
+.button:focus>.icon.white {
+    filter: var(--brand-white-filter);
+}
+
+@supports (-ms-ime-align: auto) {
+    button:focus>.icon.blue {
+        filter: var(--brand-pri-filter-over);
+    }
+}
+
+.icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    filter: var(--brand-pri-filter);
+    &:hover {
+        filter: var(--brand-pri-filter-over);
+    }
+    &.error-red,
+    &.announcement-blue,
+    &.warning-yellow,
+    &.success-green,
+    &.inline-error,
+    &.positive,
+    &.negative {
+        filter: grayscale(0) invert(0) brightness(100%);
+    }
+    &.blue {
+        filter: var(--brand-pri-filter);
+        &:hover {
+            filter: var(--brand-pri-filter-over);
+        }
+        &.error-red,
+        &.announcement-blue,
+        &.warning-yellow,
+        &.success-green,
+        &.inline-error,
+        &.positive,
+        &.negative {
+            filter: grayscale(0) invert(0) brightness(100%);
+        }
+    }
+    &.white {
+        filter: var(--brand-white-filter);
+        background-color: transparent;
+        &:hover,
+        &:focus {
+            filter: var(--brand-white-filter);
+            background-color: transparent;
+        }
+        &.error-red,
+        &.announcement-blue,
+        &.warning-yellow,
+        &.success-green,
+        &.inline-error,
+        &.positive,
+        &.negative {
+            filter: grayscale(0) invert(0) brightness(100%);
+        }
+    }
+    &.granite {
+        filter: var(--brand-dark-grey-filter);
+        background-color: transparent;
+        &:hover {
+            filter: var(--brand-dark-grey-filter);
+            background-color: transparent;
+        }
+        &.error-red,
+        &.announcement-blue,
+        &.warning-yellow,
+        &.success-green,
+        &.inline-error,
+        &.positive,
+        &.negative {
+            filter: grayscale(0) invert(0) brightness(100%);
+        }
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    .icon,
+    .icon.blue {
+        filter: var(--brand-pri-filter);
+        //filter: none;
+        &:hover {
+            filter: invert(24%) sepia(38%) saturate(4910%) hue-rotate(186deg) brightness(96%) contrast(97%);
+        }
+    }
+}
+
+.icon:focus {
+    box-shadow: 0 0 4px 3px rgba(115, 195, 235, 0.65);
+    outline: 0;
+}
+
+.icon.small {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.icon.medium {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.icon.large {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+
+/*****************************SMALL ICON STYLES*********************/
+
+.icon {
+    &.small {
+        &.checkmark {
+            background-image: url(#{$icon-small}/16-checkmark.svg);
+        }
+        &.baby-chevy-down {
+            background-image: url(#{$icon-small}/16-baby-chevy-down.svg);
+        }
+        &.baby-chevy-up {
+            background-image: url(#{$icon-small}/16-baby-chevy-up.svg);
+        }
+        &.baby-chevy-right {
+            background-image: url(#{$icon-small}/16-baby-chevy-right.svg);
+        }
+        &.baby-chevy-left {
+            background-image: url(#{$icon-small}/16-baby-chevy-left.svg);
+        }
+        &.chevron-down {
+            background-image: url(#{$icon-small}/16-chevron-down.svg);
+        }
+        &.chevron-left {
+            background-image: url(#{$icon-small}/16-chevron-left.svg);
+        }
+        &.chevron-up {
+            background-image: url(#{$icon-small}/16-chevron-up.svg);
+        }
+        &.chevron-right {
+            background-image: url(#{$icon-small}/16-chevron-right.svg);
+        }
+        &.filter {
+            background-image: url(#{$icon-small}/16-filter.svg);
+        }
+        &.fingerprint {
+            background-image: url(#{$icon-small}/16-fingerprint.svg);
+        }
+        &.star {
+            background-image: url(#{$icon-small}/16-star.svg);
+        }
+        &.recurring {
+            background-image: url(#{$icon-small}/16-recurring.svg);
+        }
+        &.inline-error {
+            background-image: url(#{$icon-small}/16-inline-error.svg);
+            filter: var(--brand-negative-filter);
+        }
+    }
+}
+
+
+/****************************MEDIUM ICON STYLES*********************/
+
+.icon {
+    &.medium {
+        &.airplane {
+            background-image: url(#{$icon-med}/24-airplane.svg);
+        }
+        &.alert {
+            background-image: url(#{$icon-med}/24-alert.svg);
+        }
+        &.arrow-left {
+            background-image: url(#{$icon-med}/24-arrow-left.svg);
+        }
+        &.arrow-right {
+            background-image: url(#{$icon-med}/24-arrow-right.svg);
+        }
+        &.arrow-up {
+            background-image: url(#{$icon-med}/24-arrow-up.svg);
+        }
+        &.arrow-up-positive {
+            background-image: url(#{$icon-med}/24-arrow-up-positive.svg);
+            filter: var(--brand-positive-filter);
+        }
+        &.arrow-down {
+            background-image: url(#{$icon-med}/24-arrow-down.svg);
+        }
+        &.arrow-down-negative {
+            background-image: url(#{$icon-med}/24-arrow-down.svg);
+            filter: var(--brand-negative-filter);
+        }
+        &.bar-graph {
+            background-image: url(#{$icon-med}/24-bar-graph.svg);
+        }
+        &.bill {
+            background-image: url(#{$icon-med}/24-bill.svg);
+        }
+        &.book {
+            background-image: url(#{$icon-med}/24-book.svg);
+        }
+        &.business {
+            background-image: url(#{$icon-med}/24-business.svg);
+        }
+        &.calculator {
+            background-image: url(#{$icon-med}/24-calculator.svg);
+        }
+        &.calendar {
+            background-image: url(#{$icon-med}/24-calendar.svg);
+        }
+        &.camera {
+            background-image: url(#{$icon-med}/24-camera.svg);
+        }
+        &.card {
+            background-image: url(#{$icon-med}/24-card.svg);
+        }
+        &.car {
+            background-image: url(#{$icon-med}/24-car.svg);
+        }
+        &.celebration {
+            background-image: url(#{$icon-med}/24-celebration.svg);
+        }
+        &.checkmark {
+            background-image: url(#{$icon-med}/24-checkmark.svg);
+        }
+        &.chevron-down {
+            background-image: url(#{$icon-med}/24-chevron-down.svg);
+        }
+        &.chevron-up {
+            background-image: url(#{$icon-med}/24-chevron-up.svg);
+        }
+        &.chevron-right {
+            background-image: url(#{$icon-med}/24-chevron-right.svg);
+        }
+        &.chevron-left {
+            background-image: url(#{$icon-med}/24-chevron-left.svg);
+        }
+        &.close {
+            background-image: url(#{$icon-med}/24-close.svg);
+        }
+        &.collapse {
+            background-image: url(#{$icon-med}/24-collapse.svg);
+        }
+        &.contact {
+            background-image: url(#{$icon-med}/24-contact.svg);
+        }
+        &.controls {
+            background-image: url(#{$icon-med}/24-controls.svg);
+        }
+        &.copy {
+            background-image: url(#{$icon-med}/24-copy.svg);
+        }
+        &.document {
+            background-image: url(#{$icon-med}/24-document.svg);
+        }
+        &.document-download {
+            background-image: url(#{$icon-med}/24-document-download.svg);
+        }
+        &.download {
+            background-image: url(#{$icon-med}/24-download.svg);
+        }
+        &.edit {
+            background-image: url(#{$icon-med}/24-edit.svg);
+        }
+        &.education {
+            background-image: url(#{$icon-med}/24-education.svg);
+        }
+        &.enclosed-add {
+            background-image: url(#{$icon-med}/24-enclosed-add.svg);
+        }
+        &.enclosed-check {
+            background-image: url(#{$icon-med}/24-enclosed-check.svg);
+        }
+        &.enclosed-close {
+            background-image: url(#{$icon-med}/24-enclosed-close.svg);
+        }
+        &.enclosed-help {
+            background-image: url(#{$icon-med}/24-enclosed-help.svg);
+        }
+        &.enclosed-minus {
+            background-image: url(#{$icon-med}/24-enclosed-minus.svg);
+        }
+        &.enclosed-more {
+            background-image: url(#{$icon-med}/24-enclosed-more.svg);
+        }
+        &.external-link {
+            background-image: url(#{$icon-med}/24-external-link.svg);
+        }
+        &.exit {
+            background-image: url(#{$icon-med}/24-exit.svg);
+        }
+        &.expand {
+            background-image: url(#{$icon-med}/24-expand.svg);
+        }
+        &.globe {
+            background-image: url(#{$icon-med}/24-globe.svg);
+        }
+        &.home {
+            background-image: url(#{$icon-med}/24-home.svg);
+        }
+        &.hamburger-menu {
+            background-image: url(#{$icon-med}/24-hamburger-menu.svg);
+        }
+        &.information {
+            background-image: url(#{$icon-med}/24-information.svg);
+        }
+        &.insurance {
+            background-image: url(#{$icon-med}/24-insurance.svg);
+        }
+        &.lightbulb {
+            background-image: url(#{$icon-med}/24-lightbulb.svg);
+        }
+        &.loading {
+            background-image: url(#{$icon-med}/24-loading.svg);
+        }
+        &.location {
+            background-image: url(#{$icon-med}/24-location.svg);
+        }
+        &.lock {
+            background-image: url(#{$icon-med}/24-lock.svg);
+        }
+        &.mail {
+            background-image: url(#{$icon-med}/24-mail.svg);
+        }
+        &.maintenance {
+            background-image: url(#{$icon-med}/24-maintenance.svg);
+        }
+        &.medical {
+            background-image: url(#{$icon-med}/24-medical.svg);
+        }
+        &.mail {
+            background-image: url(#{$icon-med}/24-mail.svg);
+        }
+        &.microphone {
+            background-image: url(#{$icon-med}/24-microphone.svg);
+        }
+        &.mobile-phone {
+            background-image: url(#{$icon-med}/24-mobile-phone.svg);
+        }
+        &.money-bag {
+            background-image: url(#{$icon-med}/24-money-bag.svg);
+        }
+        &.money {
+            background-image: url(#{$icon-med}/24-money.svg);
+        }
+        &.more-horizontal {
+            background-image: url(#{$icon-med}/24-more-horizontal.svg);
+        }
+        &.more-vertical {
+            background-image: url(#{$icon-med}/24-more-vertical.svg);
+        }
+        &.part-time {
+            background-image: url(#{$icon-med}/24-part-time.svg);
+        }
+        &.percentage {
+            background-image: url(#{$icon-med}/24-percentage.svg);
+        }
+        &.phone {
+            background-image: url(#{$icon-med}/24-phone.svg);
+        }
+        &.pie-chart {
+            background-image: url(#{$icon-med}/24-pie-chart.svg);
+        }
+        &.profile {
+            background-image: url(#{$icon-med}/24-profile.svg);
+        }
+        &.reload {
+            background-image: url(#{$icon-med}/24-reload.svg);
+        }
+        &.rewards {
+            background-image: url(#{$icon-med}/24-rewards.svg);
+        }
+        &.search {
+            background-image: url(#{$icon-med}/24-search.svg);
+        }
+        &.send-plane {
+            background-image: url(#{$icon-med}/24-send-plane.svg);
+        }
+        &.settings {
+            background-image: url(#{$icon-med}/24-settings.svg);
+        }
+        &.social-messenger {
+            background-image: url(#{$icon-med}/24-social-messenger.svg);
+        }
+        &.social-twitter {
+            background-image: url(#{$icon-med}/24-social-twitter.svg);
+        }
+        &.spouse {
+            background-image: url(#{$icon-med}/24-spouse.svg);
+        }
+        &.start-date {
+            background-image: url(#{$icon-med}/24-start-date.svg);
+        }
+        &.suitcase {
+            background-image: url(#{$icon-med}/24-suitcase.svg);
+        }
+        &.time {
+            background-image: url(#{$icon-med}/24-time.svg);
+        }
+        &.transfer {
+            background-image: url(#{$icon-med}/24-transfer-arrow.svg);
+        }
+        &.trash {
+            background-image: url(#{$icon-med}/24-trash.svg);
+        }
+        &.unlock {
+            background-image: url(#{$icon-med}/24-unlock.svg);
+        }
+        &.upload {
+            background-image: url(#{$icon-med}/24-upload.svg);
+        }
+        &.wallet {
+            background-image: url(#{$icon-med}/24-wallet.svg);
+        }
+        /* &.announcement {
+            background-image: url(#{$icon-med}/24-announcement.svg);
+        }*/
+        &.error-red {
+            background-image: url(#{$icon-med}/24-error-red.svg);
+            filter: var(--brand-negative-filter);
+        }
+        &.success-green {
+            background-image: url(#{$icon-med}/24-success-green.svg);
+            filter: var(--brand-positive-filter);
+        }
+        &.warning-yellow {
+            background-image: url(#{$icon-med}/24-warning-yellow.svg);
+            filter: var(--brand-warning-filter);
+        }
+        &.info-blue {
+            background-image: url(#{$icon-med}/24-announcement-blue.svg);
+        }
+    }
+}
+
+
+/***********************LARGE ICONS****************/
+
+.icon {
+    &.large {
+        &.alert {
+            background-image: url(#{$icon-large}/48-alert.svg);
+        }
+        &.camera {
+            background-image: url(#{$icon-large}/48-camera.svg);
+        }
+        &.chat {
+            background-image: url(#{$icon-large}/48-chat.svg);
+        }
+        &.chevron-down {
+            background-image: url(#{$icon-large}/48-chevron-down.svg);
+        }
+        &.chevron-left {
+            background-image: url(#{$icon-large}/48-chevron-left.svg);
+        }
+        &.chevron-right {
+            background-image: url(#{$icon-large}/48-chevron-right.svg);
+        }
+        &.chevron-up {
+            background-image: url(#{$icon-large}/48-chevron-up.svg);
+        }
+        &.close {
+            background-image: url(#{$icon-large}/48-close.svg);
+        }
+        &.download {
+            background-image: url(#{$icon-large}/48-download.svg);
+        }
+        &.edit {
+            background-image: url(#{$icon-large}/48-edit.svg);
+        }
+        &.enclosed-add {
+            background-image: url(#{$icon-large}/48-enclosed-add.svg);
+        }
+        &.external-link {
+            background-image: url(#{$icon-large}/48-external-link.svg);
+        }
+        &.location {
+            background-image: url(#{$icon-large}/48-location.svg);
+        }
+        &.mail {
+            background-image: url(#{$icon-large}/48-mail.svg);
+        }
+        &.phone {
+            background-image: url(#{$icon-large}/48-phone.svg);
+        }
+        &.profile {
+            background-image: url(#{$icon-large}/48-profile.svg);
+        }
+        &.phone {
+            background-image: url(#{$icon-large}/48-phone.svg);
+        }
+        &.search {
+            background-image: url(#{$icon-large}/48-search.svg);
+        }
+        &.send-plane {
+            background-image: url(#{$icon-large}/48-send-plane.svg);
+        }
+        &.transfer {
+            background-image: url(#{$icon-large}/48-transfer.svg);
+        }
+        &.enclosed-minus {
+            background-image: url(#{$icon-large}/48-enclosed-minus.svg);
+        }
+    }
+}

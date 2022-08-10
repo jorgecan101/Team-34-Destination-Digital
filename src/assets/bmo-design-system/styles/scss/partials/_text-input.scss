@@ -1,0 +1,360 @@
+:root {
+    --text-input-font-size: 1.8rem;
+    --text-input-width: 100%;
+    --text-input-height: 36px;
+    --text-input-line-height: 40px;
+    --text-input-padding: 0;
+    --text-input-margin: 7px 0 0 0;
+    --text-input-border: none;
+    --text-input-error-border: none;
+    --text-input-border-radius: none;
+    --text-input-color: var(--global-font-color);
+    --text-input-bg-color: transparent;
+    --text-input-focus: unset;
+    --help-text-font-size: 1.6rem;
+    --help-text-line-height: 16px;
+    --help-text-color: var(--brand-dark-grey);
+    --help-text-margin: 8px 0 0 0;
+    --label-font-size: 1.8rem;
+    --label-color: var(--brand-pri);
+    --label-padding: 18px 0 0 0;
+    --label-height: 42px;
+    --error-message-font-size: 1.4rem;
+    --error-message-line-height: 16px;
+    --error-message-color: var(--brand-negative);
+    --error-message-margin: 12px 0 6px 0;
+    --error-message-padding: 0px 32px 0px 19px;
+    --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+}
+
+.form-field.mercury {
+    --text-input-font-size: 1.6rem;
+    --text-input-width: 100%;
+    --text-input-height: 32px;
+    --text-input-line-height: 24px;
+    --text-input-padding: 0 0 0 8px;
+    --text-input-margin: 7px 0 0 0;
+    --text-input-border: 1px solid var(--brand-dark-grey);
+    --text-input-error-border: 1px solid var(--brand-negative);
+    --text-input-border-radius: 4px;
+    --text-input-color: var(--global-font-color);
+    --text-input-bg-color: transparent;
+    --text-input-focus: var(--global-focus-shadow);
+    --help-text-font-size: 1.4rem;
+    --help-text-line-height: 16px;
+    --help-text-color: var(--brand-dark-grey);
+    --help-text-margin: 8px 0 0 0;
+    --label-font-size: 1.4rem;
+    --label-color: var(--global-font-color);
+    --label-padding: 18px 0 0 0;
+    --label-height: 42px;
+    --error-message-font-size: 1.4rem;
+    --error-message-line-height: 16px;
+    --error-message-color: var(--brand-negative);
+    --error-message-margin: 8px 0 6px 0;
+    --error-message-padding: 0px 32px 0px 19px;
+    --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+}
+
+.form-field {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    padding: 0 0 16px;
+    .form-label-group {
+        flex: 1 1 auto;
+        position: relative;
+        padding: 0px 0px 6px 0px;
+    }
+    .input {
+        width: var(--text-input-width);
+        height: var(--text-input-height);
+        line-height: var(--text-input-line-height);
+        margin: var(--text-input-margin);
+        padding: var(--text-input-padding);
+        white-space: nowrap;
+        border: var(--text-input-border);
+        background-color: var(--text-input-bg-color);
+        transition: all 0.3s ease-out;
+        font-size: var(--text-input-font-size);
+        color: var(--global-font-color);
+        border-radius: var(--text-input-border-radius);
+        &.error {
+            border: var(--text-input-error-border);
+        }
+        &:focus {
+            box-shadow: var(--text-input-focus);
+        }
+        &:first-letter {
+            text-transform: uppercase;
+        }
+        &:disabled {
+            color: var(--brand-dark-grey);
+        }
+        &:focus+.slide-label {
+            .label-text {
+                padding: 0px;
+                font-size: 14px;
+                margin-top: -4px;
+            }
+            &:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Firefox */
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+    .input-helper-text {
+        color: var(--brand-dark-grey);
+        font-size: var(--help-text-font-size);
+        line-height: var(--help-text-line-height);
+        display: block;
+        margin: var(--help-text-margin);
+    }
+    .icon {
+        &.inline-error {
+            position: absolute;
+            top: 54px;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            &.error {
+                visibility: visible;
+                opacity: 1;
+                height: 16px;
+                position: absolute;
+            }
+        }
+    }
+    .error-message {
+        width: 100%;
+        min-width: 150px;
+        padding: var(--error-message-padding);
+        font-size: var(--error-message-font-size);
+        line-height: var(--error-message-line-height);
+        color: var(--error-message-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        margin: var(--error-message-margin);
+        display: none;
+        background-image: var(--error-message-icon-path);
+        background-repeat: no-repeat;
+        background-position: left top;
+        span {
+            display: block;
+        }
+        &.select {
+            margin-top: 2px;
+        }
+        &.error {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    }
+    .slide-label {
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        pointer-events: none;
+        height: var(--label-height);
+        cursor: pointer;
+        border-radius: 4px 0px 0px 4px;
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--bmo-granite);
+            // background: var(--brand-light-grey);
+            top: 44px;
+        }
+        .label-text {
+            display: block;
+            padding: var(--label-padding);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: var(--label-font-size);
+            color: var(--label-color);
+            transition: 0.3s ease-out;
+        }
+        &.active-label {
+            &:after {
+                // background: var(--brand-grey);
+                background: var(--bmo-granite);
+            }
+            .label-text {
+                padding: 0px;
+                font-size: 1.4rem;
+                margin-top: -4px;
+            }
+        }
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            // background: var(--brand-light-grey);
+            background: var(--bmo-granite);
+            top: 44px;
+        }
+        &.error-field {
+            &:before {
+                background-color: var(--brand-negative);
+            }
+            &:after {
+                background-color: var(--brand-negative);
+            }
+        }
+        &.disabled {
+            span.label-text {
+                color: var(--brand-dark-grey);
+            }
+        }
+    }
+    .half-input-width {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 3px;
+        //padding-right: 16px;
+        .input-helper-text-pass-fail {
+            display: block;
+            color: var(--brand-dark-grey);
+            font-size: 1.4rem;
+            line-height: 24px;
+            padding: 4px 0 4px 32px;
+            background-image: url(~/assets/bmo-design-system/img/icons/24/24-close-granite.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 24px 24px;
+            &.pass {
+                background-image: url(~/assets/bmo-design-system/img/icons/24/24-checkmark-green.svg);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 24px 24px;
+                color: #646C76;
+            }
+            &.fail {
+                background-image: url(~/assets/bmo-design-system/img/icons/24/24-cross-red.svg);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 24px 24px;
+                color: #646C76;
+            }
+        }
+    }
+    &.mercury {
+        .input {
+            &:focus+.slide-label {
+                margin-top: 18px;
+                .label-text {
+                    margin-top: unset;
+                }
+            }
+            &:focus+.slide-label.active-label {
+                margin-top: -4px;
+                .label-text {
+                    margin-top: unset;
+                }
+            }
+        }
+        .slide-label {
+            position: absolute;
+            transition: unset;
+            top: -32px;
+            /***************KILL MATERIAL ANIMATIONS********/
+            &:before {
+                z-index: unset;
+                content: "";
+                position: unset;
+                width: unset;
+                height: unset;
+                bottom: unset;
+                left: unset;
+                background: unset;
+                transform: unset;
+                transition: unset;
+                top: unset;
+            }
+            &:after {
+                z-index: unset;
+                content: "";
+                position: unset;
+                width: unset;
+                height: unset;
+                bottom: unset;
+                left: unset;
+                background: unset;
+                top: unset;
+            }
+            &.active-label {
+                transition: none;
+                top: -10px;
+                &:after {
+                    // background: var(--brand-grey);
+                    background: var(--bmo-granite);
+                }
+                .label-text {
+                    transition: none;
+                    padding: 0px;
+                    font-size: 1.4rem;
+                }
+            }
+            .label-text {
+                color: var(--label-color);
+            }
+        }
+    }
+}
+
+.mercury * {
+    transition: none!important;
+}

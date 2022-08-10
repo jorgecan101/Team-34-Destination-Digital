@@ -1,0 +1,210 @@
+@import "partials/variables";
+@import "partials/reset";
+@import "partials/overlay";
+@import "partials/grid";
+@import "partials/badge";
+@import "partials/mf-grid";
+@import "partials/flex-grid";
+@import "partials/typography";
+@import "partials/header";
+@import "partials/lists";
+@import "partials/icons";
+@import "partials/links";
+@import "partials/breadcrumb";
+@import "partials/buttons";
+@import "partials/avatar";
+@import "partials/text-input";
+@import "partials/select-input";
+@import "partials/textarea";
+@import "partials/radio-inputs";
+@import "partials/checkbox";
+@import "partials/date-picker";
+@import "partials/cards";
+@import "partials/bank-cards";
+@import "partials/modals";
+@import "partials/switch";
+@import "partials/tabs";
+@import "partials/tables";
+@import "partials/popover";
+@import "partials/notifications";
+@import "partials/accordion";
+@import "partials/spacing";
+@import "partials/loading";
+@import "partials/footer";
+html,
+body {
+    font-size: 62.5%;
+    color: var(--global-font-color);
+    letter-spacing: 0px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--global-font);
+    font-weight: 400;
+    background: var(--global-bg-color);
+    min-height: 100vh;
+}
+
+
+/****************Global STYLES*********************/
+
+[role="button"] {
+    cursor: pointer;
+}
+
+*:focus {
+    box-shadow: var(--global-focus-shadow);
+    outline: 0;
+}
+
+.positive {
+    color: var(--brand-positive);
+}
+
+.negative {
+    color: var(--brand-negative);
+}
+
+.hidden-label {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+
+a.header-skip {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.header-skip:focus {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    overflow: visible;
+    clip: auto;
+    height: 32px;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+    line-height: 32px;
+}
+
+a:focus {
+    border-radius: 4px;
+}
+
+.align-center {
+    text-align: center!important;
+}
+
+.align-right {
+    text-align: right!important;
+}
+
+.align-left {
+    text-align: left!important;
+}
+
+.v-align-top {
+    vertical-align: top!important;
+}
+
+.v-align-middle {
+    vertical-align: middle!important;
+}
+
+.v-align-bottom {
+    vertical-align: bottom!important;
+}
+
+.block {
+    display: block!important;
+}
+
+.inline {
+    display: inline!important;
+}
+
+section:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.pull-left {
+    float: left!important;
+}
+
+.center-self {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    float: none!important;
+    display: block!important;
+}
+
+
+/*************************************************SCROLLBAR*******************************************************/
+
+.scrollbar {
+    scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--brand-light-grey);
+}
+
+
+/****GLOBAL MEDIA QUERIES***/
+
+@media only screen and (max-width: $xl-screen-max)
+/*1280px*/
+
+{}
+
+@media only screen and (max-width: $lg-screen-max)
+/* 1023px */
+
+{}
+
+@media only screen and (max-width: $md-screen-max)
+/* 767px */
+
+{}
+
+@media only screen and (max-width: $sm-screen-max)
+/* 599px */
+
+{}
+
+@media only screen and (max-width: $xsm-screen-max)
+/* 374px */
+
+{}

@@ -1,0 +1,59 @@
+@import "variables";
+a {
+    color: var(--global-link-color);
+    &:hover,
+    &:focus {
+        color: var(--global-link-color-over);
+    }
+    &.p-link {
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        font-weight: 700;
+        text-decoration: underline;
+        padding: 0;
+    }
+    &.link {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.25px;
+        line-height: 30px;
+        padding: 0 2px 2px 2px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-right: 24px;
+        border-radius: 4px;
+        &:focus,
+        &:hover {
+            outline: 0;
+            text-decoration: underline;
+        }
+        .icon {
+            background-position: left center;
+            position: relative;
+            top: 6px;
+            margin-right: 4px;
+            line-height: 32px;
+        }
+    }
+}
+
+.link-group {
+    display: flex;
+    &.stacked {
+        flex-direction: column;
+        .link {
+            width: fit-content;
+        }
+    }
+}
+
+@media only screen and (max-width: $sm-screen-max) {
+    .link-group {
+        display: flex;
+        flex-direction: column;
+        .link {
+            width: fit-content;
+        }
+    }
+}

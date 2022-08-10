@@ -1,0 +1,96 @@
+:root {
+    --badge-default-bg: var(--brand-dark-blue);
+    --badge-default-text: var(--brand-white);
+    --badge-negative-bg: var(--brand-negative);
+    --badge-negative-text: var(--brand-white);
+    --badge-positive-bg: var(--brand-positive);
+    --badge-positive-text: var(--brand-white);
+    --badge-light-grey-bg: var(--brand-light-grey);
+    --badge-light-grey-text: var(--brand-black);
+    --badge-sky-blue-bg: var(--bmo-sky-blue);
+    --badge-sky-blue-text: var(--brand-white);
+    --badge-poolside-bg: var(--bmo-poolside);
+    --badge-poolside-text: var(--brand-white);
+    --badge-lilac-bg: #4D71A8;
+    --badge-lilac-text: var(--brand-white);
+    --badge-retrospect-bg: #00977B;
+    --badge-retrospect-text: var(--brand-white);
+    --badge-olive-bg: #C3C070;
+    --badge-olived-text: #001928;
+    --badge-sunflower-bg: #FFC700;
+    --badge-sunflower-text: #001928;
+    --badge-orchid-bg: #B1357D;
+    --badge-orchid-text: var(--brand-white);
+}
+
+.badge {
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+    color: var(--brand-white);
+    box-sizing: border-box;
+    padding: 0 16px;
+    line-height: 26px;
+    font-size: 1.4rem;
+    height: 32px;
+    border-radius: 4px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-right: 16px;
+    background-color: var(--brand-dark-blue);
+    &.small {
+        font-size: 1.0rem;
+        height: 16px;
+        border-radius: 2px;
+        line-height: 16px;
+        vertical-align: top;
+        margin-right: 8px;
+        padding: 0 4px;
+    }
+    &.light-grey {
+        background: var(--brand-light-grey);
+        color: var(--badge-light-grey-text);
+    }
+    &.sky-blue {
+        background-color: var(--badge-sky-blue-bg);
+        color: var(--badge-sky-blue-text);
+    }
+    &.poolside {
+        background-color: var(--badge-poolside-bg);
+        color: var(--badge-poolside-text);
+    }
+    &.lilac {
+        background-color: var(--badge-lilac-bg);
+        color: var(--badge-lilac-text);
+    }
+    &.retrospect {
+        background-color: var(--badge-retrospect-bg);
+        color: var(--badge-retrospect-text);
+    }
+    &.olive {
+        background-color: var(--badge-olive-bg);
+        color: var(--badge-olive-text);
+    }
+    &.sunflower {
+        background-color: var(--badge-sunflower-bg);
+        color: var(--badge-sunflower-text);
+        color: var(--badge-sunflower-text);
+    }
+    &.orchid {
+        background-color: var(--badge-orchid-bg);
+        color: var(--badge-orchid-text);
+    }
+    &.negative {
+        background-color: var(--badge-negative-bg);
+        color: var(--badge-negative-text);
+    }
+    &.positive {
+        background-color: var(--badge-positive-bg);
+        color: var(--badge-positive-text);
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 4px 3px rgba(115, 195, 235, 0.65);
+    }
+}

@@ -1,0 +1,335 @@
+        :root {
+            --card-checkbox-label-box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+            --card-checkbox-hover-label-box-shadow: 0 0 8px 0 rgba(0, 25, 40, 0.12), 0 4px 24px 0 rgba(0, 25, 40, 0.07);
+        }
+        
+        .check-group {
+            .error-message {
+                width: 100%;
+                min-width: 150px;
+                padding: 0px 32px 0px 19px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 16px;
+                color: var(--bmo-negative);
+                background-image: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg);
+                background-repeat: no-repeat;
+                background-position: left top;
+                visibility: hidden;
+                opacity: 0;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                margin-top: 24px;
+                display: none;
+                margin-bottom: 6px;
+                position: relative;
+                left: -28px;
+                &.has-error {
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+        
+        .input-wrap.input-checkbox {
+            align-items: center;
+            padding-left: 32px;
+            padding-top: 0;
+            label {
+                cursor: pointer;
+                position: relative;
+                top: 0px;
+                left: 12px;
+                color: var(--brand-black);
+                font-size: 1.6rem;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                line-height: 24px;
+                display: block;
+                width: auto;
+                width: fit-content;
+                padding: 4px 0;
+            }
+            .check-legend {
+                position: relative;
+                left: -32px;
+            }
+            input[type="checkbox"] {
+                position: relative;
+                width: 0px;
+                height: 0px;
+                opacity: 0;
+            }
+            input[type="checkbox"]+label:before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: -40px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0px;
+                width: 24px;
+                height: 24px;
+                border: 2px solid var(--brand-dark-grey);
+                border-radius: 4px;
+                box-sizing: border-box;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            input[type="checkbox"]:checked+label:before {
+                content: '';
+                background-color: var(--brand-pri);
+                background-image: url('~/assets/bmo-design-system/img/icons/16/16-checkmark-white.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 15px;
+                border-color: var(--brand-pri);
+                cursor: pointer;
+                border: 2px solid var(--brand-pri);
+                padding-bottom: 0;
+                box-sizing: border-box;
+                &:focus+label:before {
+                    border: 2px solid var(--brand-pri);
+                }
+            }
+            // Focus
+            input[type="checkbox"]:focus+label:before {
+                //border: 2px solid var(--brand-highlight);
+                box-shadow: var(--global-focus-shadow);
+            }
+            input[type="checkbox"]:checked:focus+label:before {
+                box-shadow: var(--global-focus-shadow);
+            }
+            // Error
+            input[type="checkbox"].has-error+label:before {
+                border: 2px solid var(--brand-negative);
+            }
+            // Disabled
+            input[type="checkbox"]:disabled+label:before {
+                background-color: var(--brand-light-grey);
+                border: 2px solid var(--brand-dark-grey);
+                /*!important*/
+                ;
+            }
+            // Disabled
+            input[type="checkbox"]:disabled+label {
+                color: var(--brand-dark-grey);
+                cursor: default;
+            }
+            // Disabled and checked while disabled
+            input[type="checkbox"]:checked:disabled+label:before {
+                background-color: var(--brand-dark-grey);
+                background-image: url('~/assets/bmo-design-system/img/icons/16/16-checkmark-white.svg');
+                border: 2px solid var(--brand-dark-grey);
+                /*!important*/
+                cursor: default;
+            }
+        }
+        
+        .input-wrap.input-checkbox {
+            bmo-check {
+                label {
+                    padding: 0;
+                }
+            }
+        }
+        
+        .input-wrap.input-checkbox input[type="checkbox"]:focus {
+            border: 2px solid var(--brand-dark-blue);
+            padding-bottom: 0;
+            box-shadow: 0 0 2px 1px rgba(115, 195, 235, 0.65);
+        }
+        /******************* CARD CHECKBOXES *****************/
+        
+        .check-card-wrap {
+            position: relative;
+            left: -40px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            +.error-message.has-error {
+                position: relative;
+                top: -24px;
+                margin-bottom: 8px;
+                ;
+            }
+        }
+        
+        .grid .bmo-card-checkbox {
+            display: flex;
+            flex-flow: row;
+        }
+        
+        .checkbox-cards input[type="checkbox"] {
+            display: none;
+        }
+        
+        .bmo-card-checkbox.check-fixed-cards {
+            margin: 0px 0px 16px 0px;
+            display: block;
+            float: left;
+        }
+        
+        .input-checkbox {
+            .bmo-card-checkbox {
+                &.check-fixed-cards {
+                    label {
+                        display: flex;
+                        flex-flow: column;
+                        position: relative;
+                        width: 234px;
+                        height: 100%;
+                        min-height: 80px;
+                        margin: 0px 8px;
+                        padding: 17px 8px;
+                        border: 3px solid var(--brand-white);
+                        border-radius: 4px;
+                        cursor: pointer;
+                        background: var(--brand-white);
+                        transition: all 0.3s ease-out;
+                        box-shadow: var(--card-checkbox-label-box-shadow);
+                        justify-content: center;
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+                        &::before {
+                            content: unset!important;
+                        }
+                    }
+                    .card-check-label-text {
+                        text-align: center;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        color: var(--global-font-color);
+                    }
+                    .card-check-image {
+                        padding: 16px 0;
+                        text-align: center;
+                        ;
+                    }
+                    .card-check-image+.card-check-label-text {
+                        padding-bottom: 24px;
+                    }
+                    label span.image {
+                        text-align: center;
+                        width: 96px;
+                        height: 72px;
+                        margin-top: 16px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    label span.image img {
+                        pointer-events: none;
+                        /* - Fix for IE11 (tile not clickable on image) - */
+                        -moz-user-select: none;
+                        /* - Fix for Firefox (image auto selected when clicking on image - only when "pointer-events: none;
+    " is set) - */
+                    }
+                    label span.description {
+                        text-align: center;
+                        padding: 8px 0px 0px 0px;
+                        font-size: 1.6rem;
+                        color: var(--brand-black);
+                        font-weight: 700;
+                    }
+                    label span.check {
+                        opacity: 0;
+                        visibility: hidden;
+                        position: absolute;
+                        top: -1px;
+                        /* - Fix for IE11 - keep -1px, not 0px */
+                        right: -1px;
+                        /* - Fix for IE11 - keep -1px, not 0px */
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 0px 0px 0px 4px;
+                        background-image: url('~/assets/bmo-design-system/img/icons/16/16-checkmark-white.svg');
+                        background-repeat: no-repeat;
+                        // background-color: #68bbe8;
+                        background-color: var(--brand-pri);
+                        background-size: 16px 16px;
+                        background-position: center center;
+                        transition: all .3s ease-in;
+                        -moz-transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                    }
+                    input[type="checkbox"] {
+                        opacity: 0;
+                        width: 0px;
+                        height: 0px;
+                        overflow: hidden;
+                    }
+                    input[type="checkbox"]:checked+label span.check {
+                        opacity: 1;
+                        visibility: visible;
+                        background: var(--brand-pri) url(~/assets/bmo-design-system/img/icons/16/16-checkmark-white.svg) 8px no-repeat;
+                        background-position: center center;
+                        background-size: 16px;
+                    }
+                    &.error-field label {
+                        border: 3px solid var(--brand-negative);
+                    }
+                    input[type="checkbox"]:checked+label,
+                    input[type="checkbox"]:focus+label,
+                    input[type="checkbox"]:checked:focus+label {
+                        border: 3px solid var(--brand-pri);
+                    }
+                    input[type="checkbox"]:disabled:checked+label {
+                        border: 3px solid var(--brand-dark-grey);
+                    }
+                    input[type="checkbox"]:disabled+label {
+                        filter: grayscale(100);
+                    }
+                    input[type="checkbox"]:focus+label {
+                        box-shadow: var(--global-focus-shadow);
+                    }
+                    input[type="checkbox"]:checked:focus+label {
+                        box-shadow: var(--global-focus-shadow);
+                    }
+                    input[type="checkbox"]:checked:focus+label span.check {
+                        display: block;
+                    }
+                    input[type="checkbox"]:hover+label {
+                        box-shadow: var(--card-checkbox-hover-label-box-shadow);
+                    }
+                    input[type="checkbox"]:disabled:hover+label {
+                        box-shadow: var(--card-checkbox-label-box-shadow);
+                        cursor: default;
+                    }
+                }
+            }
+        }
+
+        /************************************************Parent Child Checkbox STYLTES**************************/
+
+
+/***********************************************************************************************/
+
+.parent-checkbox.input-wrap.input-checkbox input[type="checkbox"][aria-checked="mixed"] + label:before {
+    background-color: var(--brand-pri);
+    background-image: url('~/assets/bmo-design-system/img/icons/16/16-dash.svg');
+}
+
+.parent-checkbox.input-wrap.input-checkbox input[type="checkbox"][aria-checked="false"] + label:before {
+    background-color: none;
+    background-image: none;
+}
+
+.parent-checkbox.input-wrap.input-checkbox input[type="checkbox"][aria-checked="true"] + label:before {
+    background-color: var(--brand-pri);
+    background-image: url('~/assets/bmo-design-system/img/icons/16/16-checkmark-white.svg');
+}
+
+.parent-checkbox + ul.checkboxes {
+    padding-left: 24px;
+    li {
+        list-style: none;
+        .input-wrap.input-checkbox {
+            padding-top: 0px;
+        }
+    }
+}

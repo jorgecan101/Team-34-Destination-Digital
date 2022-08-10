@@ -1,0 +1,248 @@
+@import "variables";
+:root {
+    --cards-bg-color: var(--global-bg-color-raised);
+    --cards-border-color: var(--brand-light-grey);
+    --cards-box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+    --cards-box-shadow-over: 0 0 8px 0 rgba(0, 25, 40, 0.12), 0 4px 24px 0 rgba(0, 25, 40, 0.07);
+    /***Non-color-variables***/
+    --cards-border-radius: 4px;
+}
+
+.ios {
+    --cards-box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    --cards-border-color: none;
+    --cards-border-radius: 8px;
+}
+
+.md {
+    --cards-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    --cards-border-color: none;
+}
+
+.bmo-card {
+    border: 1px solid var(--cards-border-color);
+    box-shadow: var(--cards-box-shadow);
+    border-radius: var(--cards-border-radius);
+    background-color: var(--cards-bg-color);
+    box-sizing: border-box;
+    display: inline-block;
+    min-height: 40px;
+    margin: 8px 0;
+    padding: 8px 16px;
+    width: 100%;
+    @include transition(.3s box-shadow ease);
+    &.hover {
+        &:hover {
+            box-shadow: var(--cards-box-shadow-over);
+            cursor: pointer;
+        }
+    }
+    &.flat {
+        box-shadow: unset;
+        border: 0px solid #fff;
+    }
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    &.no-pad {
+        padding: 0;
+    }
+    .top-of-card-link {
+        box-sizing: border-box;
+        // padding: 8px 16px 0;
+        padding: 8px 16px 8px;
+        display: block;
+        width: 100%;
+        &:focus {
+            box-shadow: var(--global-focus-shadow);
+            outline: 0;
+        }
+    }
+}
+
+
+/**********************ACCOUNT CARD STYLES********************/
+
+.card-account-nickname {
+    color: var(--global-font-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 32px;
+    display: block;
+    float: left;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-account-total {
+    color: var(--brand-pri);
+    font-size: 1.8rem;
+    line-height: 32px;
+    text-align: right;
+    display: block;
+    float: right;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .card-account-currency {
+        color: var(--brand-dark-grey);
+        font-family: Heebo;
+        font-size: 1.2rem;
+        line-height: 32px;
+        text-align: right;
+        display: inline-block;
+        margin-right: 4px;
+    }
+}
+
+.card-account-name {
+    color: var(--brand-dark-grey);
+    font-size: 1.6rem;
+    line-height: 24px;
+    display: block;
+    float: left;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.account-gain-loss {
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: right;
+    display: block;
+    float: right;
+    position: relative;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 50px;
+    box-sizing: border-box;
+    &.gain {
+        color: var(--brand-positive);
+        .icon {
+            filter: var(--brand-positive-filter);
+        }
+    }
+    &.loss {
+        color: var(--brand-negative);
+        .icon {
+            filter: var(--brand-negative-filter);
+        }
+    }
+    .icon {
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 0px;
+        width: 24px;
+        height: 16px;
+        background-size: 24px 24px;
+        background-position: center top 2px;
+    }
+}
+
+.card-account-avail-credit {
+    float: right;
+    color: var(--brand-dark-grey);
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: right;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .availble-label {
+        color: var(--brand-dark-grey);
+        font-weight: 500;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: right;
+    }
+}
+
+.keyline {
+    margin: 4px 0 8px;
+    width: 56px;
+    height: 4px;
+    border-right: 4px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    border-top: 0;
+    display: block;
+    &.investments {
+        background: var(--bmo-lilac);
+    }
+    &.credit-card {
+        background: var(--bmo-retrospect);
+    }
+    &.chequing {
+        background: var(--bmo-sky-blue);
+    }
+    &.savings {
+        background: var(--bmo-sky-blue);
+    }
+    &.line-of-credit {
+        background: var(--bmo-sunflower);
+    }
+    &.mortgage,
+    &.loan {
+        background: var(--bmo-olive);
+    }
+}
+
+.below-keyline-left {
+    color: var(--brand-dark-grey);
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 24px;
+    display: block;
+    float: left;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.below-keyline-right {
+    color: var(--brand-dark-grey);
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: right;
+    display: block;
+    float: right;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .below-keyline-right-date {}
+}
+
+.account-card-divide {
+    border-bottom: 1px solid var(--brand-light-grey);
+    display: block;
+    margin: 4px 16px;
+}
+
+.account-card-action-list {
+    list-style: none;
+    margin: 8px 16px 8px;
+    display: block;
+    li {
+        display: inline-block;
+        a.link {
+            margin: 0 16px 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: $sm-screen-max) {
+    .bmo-card {}
+}

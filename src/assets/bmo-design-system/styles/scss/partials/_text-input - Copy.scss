@@ -1,0 +1,233 @@
+.form-field {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    padding: 0 0 16px;
+    .form-label-group {
+        flex: 1 1 auto;
+        position: relative;
+        padding: 0px 0px 6px 0px;
+    }
+    .input {
+        width: 100%;
+        height: 36px;
+        line-height: 40px;
+        margin: 7px 0px 0 0px;
+        padding: 0px;
+        white-space: nowrap;
+        border: none;
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+        font-size: 1.8rem;
+        color: var(--global-font-color);
+        &:focus {
+            box-shadow: unset;
+        }
+        &:first-letter {
+            text-transform: uppercase;
+        }
+        &:disabled {
+            color: var(--brand-dark-grey);
+        }
+        &:focus+.slide-label {
+            .label-text {
+                padding: 0px;
+                font-size: 14px;
+                margin-top: -4px;
+            }
+            &:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Firefox */
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+    .input-helper-text {
+        color: var(--brand-dark-grey);
+        font-size: 1.4rem;
+        line-height: 16px;
+        display: block;
+        margin-top: 8px;
+    }
+    .icon {
+        &.inline-error {
+            position: absolute;
+            top: 54px;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            &.error {
+                visibility: visible;
+                opacity: 1;
+                height: 16px;
+                position: absolute;
+            }
+        }
+    }
+    .error-message {
+        width: 100%;
+        min-width: 150px;
+        padding: 0px 32px 0px 19px;
+        font-size: 1.4rem;
+        line-height: 16px;
+        color: var(--brand-negative);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        margin-top: 12px;
+        display: none;
+        margin-bottom: 6px;
+        background-image: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg);
+        background-repeat: no-repeat;
+        background-position: left top;
+        span {
+            display: block;
+        }
+        &.select {
+            margin-top: 2px;
+        }
+        &.error {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    }
+    .slide-label {
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        pointer-events: none;
+        height: 42px;
+        cursor: pointer;
+        border-radius: 4px 0px 0px 4px;
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--bmo-granite);
+            // background: var(--brand-light-grey);
+            top: 44px;
+        }
+        .label-text {
+            display: block;
+            padding: 18px 0px 0px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 1.8rem;
+            color: var(--brand-pri-text);
+            transition: 0.3s ease-out;
+        }
+        &.active-label {
+            &:after {
+                // background: var(--brand-grey);
+                background: var(--bmo-granite);
+            }
+            .label-text {
+                padding: 0px;
+                font-size: 1.4rem;
+                margin-top: -4px;
+            }
+        }
+        &:before {
+            z-index: 4;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            background: var(--brand-pri);
+            transform: scaleX(0);
+            transition: all 0.3s linear;
+            top: 44px;
+        }
+        &:after {
+            z-index: 3;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0px;
+            // background: var(--brand-light-grey);
+            background: var(--bmo-granite);
+            top: 44px;
+        }
+        &.error-field {
+            &:before {
+                background-color: var(--brand-negative);
+            }
+            &:after {
+                background-color: var(--brand-negative);
+            }
+        }
+        &.disabled {
+            span.label-text {
+                color: var(--brand-dark-grey);
+            }
+        }
+    }
+    .half-input-width {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 3px;
+        //padding-right: 16px;
+        .input-helper-text-pass-fail {
+            display: block;
+            color: var(--brand-dark-grey);
+            font-size: 1.4rem;
+            line-height: 24px;
+            padding: 4px 0 4px 32px;
+            background-image: url(~/assets/bmo-design-system/img/icons/24/24-close-granite.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 24px 24px;
+            &.pass {
+                background-image: url(~/assets/bmo-design-system/img/icons/24/24-checkmark-green.svg);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 24px 24px;
+                color: #646C76;
+            }
+            &.fail {
+                background-image: url(~/assets/bmo-design-system/img/icons/24/24-cross-red.svg);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 24px 24px;
+                color: #646C76;
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Text Input</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../styles/css/global.css">
+    <link rel="stylesheet" href="../../fonts/heebo.css">
+</head>
+
+<body class="scrollbar">
+    <div class="bmo-container">
+        <div class="row">
+            <div class="pb-1u grid col-100">
+                <h1 class="display-2 light">Inputs</h1>
+                <h2 class="title-1 bold">Text Inputs
+                </h2>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="text" class="input text" name="first-name-with-autofocus" id="first-name-with-autofocus" aria-describedby="error-first-name-with-autofocus">
+                        <label class="slide-label" for="first-name-with-autofocus">
+                                <span class="label-text">First Name with autofocus</span>
+                            </label>
+                        <span class="error-message" role="alert" id="error-first-name-with-autofocus">This is an error</span>
+                        <span class="input-helper-text" id="helper-first-name-with-autofocus">Text input helper text</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="text" class="input text error" name="last-name" id="last-name" aria-describedby="error-last-name">
+                        <label class="slide-label error-field" for="last-name">
+                                <span class="label-text">Last Name</span>
+                            </label>
+                        <span class="error-message error" role="alert" id="error-last-name">Please enter your last name</span>
+                        <span class="input-helper-text" id="helper-last-name"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="tel" class="input text" name="phone-number" id="phone-number" aria-describedby="error-phone-number">
+                        <label class="slide-label" for="phone-number">
+                                    <span class="label-text">Phone Number</span>
+                                </label>
+                        <span class="error-message" role="alert" id="error-phone-number">This is an error</span>
+                        <span class="input-helper-text" id="helper-phone-number">Please enter your phone number</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="text" class="input text" name="disabled-input" id="disabled-input" aria-describedby="error-disabled-input" value="Hello" disabled="">
+                        <label class="slide-label disabled active-label" for="disabled-input">
+                                <span class="label-text">Disabled input</span>
+                            </label>
+                        <span class="error-message" role="alert" id="error-disabled-input">This is an error</span>
+                        <span class="input-helper-text" id="helper-disabled-input">Please enter your phone number</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group"><input type="text" class="input text" name="readonly-input" id="readonly-input" aria-describedby="error-readonly-input" value="This value is readonly" readonly="">
+                        <label class="slide-label active-label" for="readonly-input">
+                                    <span class="label-text">Readonly input</span>
+                            </label>
+                        <span class="error-message" role="alert" id="error-readonly-input">This is an error</span>
+                        <span class="input-helper-text" id="helper-readonly-input">Please enter your phone number</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="password" class="input text" name="password" id="password" aria-describedby="error-password">
+                        <label class="slide-label" for="password">
+                                <span class="label-text">Password</span>
+                            </label>
+                        <span class="error-message" role="alert" id="error-password">This is an error</span>
+                        <span class="input-helper-text" id="helper-password">Please enter your phone number</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid col-50 sm-col-100">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <input type="password" class="input text" name="basic-password" id="basic-password" aria-describedby="error-basic-password">
+                        <label class="slide-label" for="basic-password">
+                                    <span class="label-text">Basic Password</span>
+                                </label>
+                        <span class="error-message" role="alert" id="error-basic-password">This is an error</span>
+                        <span class="input-helper-text" id="helper-basic-password"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------SET PASSWORD WITH VERIFY----------------------->
+
+        <!---------------------SET PASSWORD WITH VERIFY----------------------->
+
+        <div class="grid col-50">
+            <div class="form-field">
+                <div class="form-label-group">
+                    <input id="passwordCreate" name="password" type="password" class="input create-verify">
+                    <label class="slide-label" for="passwordCreate"><span class="label-text">Create a password</span></label>
+                    <span class="error-message">This is error text</span>
+                    <div class="half-input-width">
+                        <span class="input-helper-text-pass-fail min-eight">Minimum 8 characters</span>
+                        <span class="input-helper-text-pass-fail one-num">Minimum 1 number</span>
+                        <span class="input-helper-text-pass-fail special-char">Minimum 1 special character</span>
+                    </div>
+                    <div class="half-input-width">
+                        <span class="input-helper-text-pass-fail lower-case">Minimum 1 lower case letter</span>
+                        <span class="input-helper-text-pass-fail upper-case">Minimum 1 upper case letter</span>
+                        <span class="input-helper-text-pass-fail matching" style="display: none">Matching</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid col-50">
+            <div class="form-field">
+                <div class="form-label-group">
+                    <input id="passwordVerify" name="password" type="password" class="input create-verify">
+                    <label class="slide-label" for="passwordVerify"><span class="label-text">Verify your password</span></label>
+                    <span class="error-message">This is error text</span>
+                    <div class="half-input-width">
+                        <span class="input-helper-text-pass-fail matching" style="display: block;">Matching</span>
+                        <span class="input-helper-text-pass-fail min-eight" style="display: none;">Minimum 8 characters</span>
+                        <span class="input-helper-text-pass-fail one-num" style="display: none;">Minimum 1 number</span>
+                        <span class="input-helper-text-pass-fail special-char" style="display: none;">Minimum 1 special character</span>
+                    </div>
+                    <div class="half-input-width">
+                        <span class="input-helper-text-pass-fail lower-case" style="display: none;">Minimum 1 lower case letter</span>
+                        <span class="input-helper-text-pass-fail upper-case" style="display: none;">Minimum 1 upper case letter</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid col-100">
+                <h1 class="display-2 light">Textarea</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid col-33">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <textarea name="text-area-demo-1" id="text-area-demo-1" class="scrollbar input textarea" rows="1"></textarea>
+                        <label class="slide-label" for="text-area-demo-1">
+                            <span class="label-text">Textarea</span>
+                        </label>
+                        <span class="error-message">Textarea error</span>
+                        <span class="input-helper-text">Text box will expand as you type</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <textarea name="text-area-demo-2" id="text-area-demo-2" class="input textarea scrollbar" rows="1" aria-describedby="textarea-error">textarea with error</textarea>
+                        <label class="slide-label error-field active-label" for="text-area-demo-2">
+                            <span class="label-text">Textarea has an Error</span>
+                        </label>
+                        <span class="error-message has-error" role="alert" id="textarea-error">Error Message</span>
+                        <span class="input-helper-text">Text box will expand as you type</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-33">
+                <div class="form-field">
+                    <div class="form-label-group">
+                        <textarea name="text-area-demo-3" id="text-area-demo-3" class="scrollbar input textarea" rows="1" disabled>Disabled textarea</textarea>
+                        <label class="slide-label active-label disabled" for="text-area-demo-3">
+                            <span class="label-text">Disabled Textarea</span>
+                        </label>
+                        <span class="error-message">Textarea error</span>
+                        <span class="input-helper-text">Text box will expand as you type</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bmo-overlay-dark"></div>
+    <script type="module" src="../../js/core.js"></script>
+
+</body>
+
+</html>

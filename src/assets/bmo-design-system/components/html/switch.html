@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Switches</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../styles/css/global.css">
+    <link rel="stylesheet" href="../../fonts/heebo.css">
+</head>
+
+<body class="scrollbar">
+    <div class="bmo-container">
+        <div class="row">
+            <div width="100" class="pb-1u grid col-100">
+                <h1 class="display-2 light">Switches</h1>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="pt-1u pb-1u row">
+                    <h2 class="sub-heading bold">Settings Switch</h2>
+                </div>
+                <div class="bmo-switch-wrap">
+                    <input type="checkbox" name="settings-switch" id="settings-switch">
+                    <label class="activate-switch active-label" for="settings-switch">
+                        <span class="switch-label left">Settings Switch</span>
+                        <div class="bmo-switch-rail"></div>
+                        <span role="button" tabindex="0" class="bmo-switch" aria-label="Toggle Settings Switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="pt-1u pb-1u row">
+                    <h2 class="sub-heading bold">Dual Switch</h2>
+                </div>
+                <div class="bmo-switch-wrap dual">
+                    <input type="checkbox" name="cad-usd" id="cad-usd">
+                    <label class="activate-switch active-label" for="cad-usd">
+                        <span class="switch-label left">CAD</span>
+                        <div class="bmo-switch-rail"></div>
+                        <span role="button" tabindex="0" class="bmo-switch" aria-label="switch between CAD and USD CAD is currently active"></span>
+                        <span class="switch-label right" id="right-label-daul">USD</span>
+                    </label>
+                </div>
+            </div>
+            <div class="grid col-33 sm-col-100">
+                <div class="pt-1u pb-1u row">
+                    <h2 class="sub-heading bold">Full Width Switch</h2>
+                </div>
+                <div class="bmo-switch-wrap full-width">
+                    <input type="checkbox" name="full-width" id="full-width">
+                    <label class="activate-switch active-label" for="full-width">
+                        <span class="switch-label left">Full Width</span>
+                        <div class="bmo-switch-rail"></div>
+                        <span role="button" tabindex="0" class="bmo-switch" aria-label="Toggle Full Width"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../../js/core.js"></script>
+
+</body>
+
+</html>

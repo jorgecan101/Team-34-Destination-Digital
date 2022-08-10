@@ -1,0 +1,22 @@
+.bank-card {
+    min-height: 100px;
+    border: 1px solid var(--cards-border-color);
+    box-shadow: var(--cards-box-shadow);
+    display: inline-block;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &.blue {
+        background-image: url('~/assets/bmo-design-system/img/bank-cards/card-bmo-blue.svg');
+    }
+    &.ultramarine {
+        background-image: url('~/assets/bmo-design-system/img/bank-cards/card-ultramarine.svg');
+    }
+    &.mixed {
+        background-image: url('~/assets/bmo-design-system/img/bank-cards/card-mixed-blue.svg');
+    }
+}

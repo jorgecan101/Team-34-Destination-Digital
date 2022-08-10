@@ -1,0 +1,220 @@
+              :root {
+                 --textarea-input-font-size: 1.8rem;
+                 --textarea-input-width: 100%;
+                 --textarea-input-height: unset;
+                 --textarea-input-line-height: normal;
+                 --textarea-input-padding: 4px 0 0 0;
+                 --textarea-input-margin: 7px 0 0 0;
+                 --textarea-input-border: none;
+                 --textarea-input-error-border: none;
+                 --textarea-input-border-radius: none;
+                 --textarea-input-color: var(--global-font-color);
+                 --textarea-input-bg-color: transparent;
+                 --textarea-input-focus: unset;
+                 --help-text-font-size: 1.6rem;
+                 --help-text-line-height: 16px;
+                 --help-text-color: var(--brand-grey);
+                 --help-text-margin-textarea: 4px 0 0 0;
+                 --label-font-size: 1.8rem;
+                 --label-color: var(--brand-pri);
+                 --label-padding: 18px 0 0 0;
+                 --label-height: 42px;
+                 --error-message-font-size: 1.4rem;
+                 --error-message-line-height: 16px;
+                 --error-message-color: var(--brand-negative);
+                 --error-message-margin-textrea: 4px 0 6px 0;
+                 --error-message-padding: 0px 32px 0px 19px;
+                 --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+             }
+             
+             .form-field.mercury {
+                 --textarea-input-font-size: 1.6rem;
+                 --textarea-input-width: 100%;
+                 --textarea-input-height: 32px;
+                 --textarea-input-line-height: 24px;
+                 --textarea-input-padding: 0 0 0 8px;
+                 --textarea-input-margin: 7px 0 0 0;
+                 --textarea-input-border: 1px solid var(--brand-dark-grey);
+                 --textarea-input-error-border: 1px solid var(--brand-negative);
+                 --textarea-input-border-radius: 4px;
+                 --textarea-input-color: var(--global-font-color);
+                 --textarea-input-bg-color: transparent;
+                 --textarea-input-focus: var(--global-focus-shadow);
+                 --help-text-font-size: 1.4rem;
+                 --help-text-line-height: 16px;
+                 --help-text-color: var(--brand-dark-grey);
+                 --help-text-margin: 8px 0 0 0;
+                 --label-font-size: 1.4rem;
+                 --label-color: var(--global-font-color);
+                 --label-padding: 18px 0 0 0;
+                 --label-height: 42px;
+                 --error-message-font-size: 1.4rem;
+                 --error-message-line-height: 16px;
+                 --error-message-color: var(--brand-negative);
+                 --error-message-margin: 8px 0 6px 0;
+                 --error-message-padding: 0px 32px 0px 19px;
+                 --error-message-icon-path: url(~/assets/bmo-design-system/img/icons/16/16-inline-error-red.svg)
+             }
+             
+             .form-field.textarea-field {
+                 .textarea {
+                     height: 24px;
+                     overflow: hidden;
+                     transition: all .3s ease;
+                     resize: none;
+                     min-height: 40px;
+                     max-height: 50vh;
+                     overflow-y: auto;
+                     white-space: pre-wrap;
+                     -webkit-box-sizing: border-box;
+                     box-sizing: border-box;
+                     width: var(--text-input-width);
+                     height: var(--textarea-input-height);
+                     line-height: var(--textarea-input-line-height);
+                     margin: var(--textarea-input-margin);
+                     padding: var(--textarea-input-padding);
+                     border: var(--textarea-input-border);
+                     background-color: var(--textarea-input-bg-color);
+                     transition: all 0.3s ease-out;
+                     font-size: var(--textarea-input-font-size);
+                     color: var(--global-font-color);
+                     border-radius: var(--textarea-input-border-radius);
+                     font-family: 'heebo';
+                     &.error {
+                         border-color: var(--brand-negative);
+                     }
+                 }
+                 .textarea {
+                     // white-space: nowrap;
+                     background-color: rgba(225, 225, 225, 0);
+                     transition: all 0.3s ease-out;
+                 }
+                 .textarea::-webkit-input-placeholder {
+                     height: 24px;
+                     color: var(--brand-grey);
+                     font-size: 1.8rem;
+                     line-height: 24px;
+                 }
+                 .textarea::-moz-placeholder {
+                     height: 24px;
+                     color: var(--brand-grey);
+                     font-size: 1.8rem;
+                     line-height: 24px;
+                 }
+                 .textarea:-ms-input-placeholder {
+                     height: 24px;
+                     color: var(--brand-grey);
+                     font-size: 1.8rem;
+                     line-height: 24px;
+                 }
+                 .textarea:-moz-placeholder {
+                     height: 24px;
+                     color: var(--brand-grey);
+                     ;
+                     font-size: 1.8rem;
+                     line-height: 24px;
+                 }
+                 .textarea:placeholder {
+                     font-family: 'heebo';
+                 }
+                 .textarea+.slide-label {
+                     position: static;
+                     span {
+                         position: absolute;
+                         top: 0;
+                     }
+                     &:after,
+                     &:before {
+                         margin-top: -3px;
+                         position: relative;
+                         top: unset;
+                         display: block;
+                     }
+                     &:before {
+                         float: left;
+                     }
+                 }
+                 &:disabled+label.slide-label span {
+                     color: var(--brand-dark-grey);
+                 }
+                 .textarea+label.slide-label {
+                     //   position: static;
+                 }
+                 .textarea:focus+label.slide-label:before {
+                     visibility: visible;
+                     transform: scaleX(1);
+                 }
+                 .textarea:focus+label.slide-label span.label-text {
+                     padding: 0px;
+                     font-size: 14px;
+                     margin-top: -4px;
+                 }
+                 .error-message {
+                     margin: var(--error-message-margin-textrea);
+                 }
+                 .input-helper-text {
+                     margin: var(--help-text-margin-textarea);
+                 }
+                 &.mercury {
+                     .textarea {
+                         &:focus+.slide-label {
+                             margin-top: 18px;
+                             .label-text {
+                                 margin-top: unset;
+                             }
+                         }
+                         &:focus+.slide-label.active-label {
+                             margin-top: -4px;
+                             .label-text {
+                                 margin-top: unset;
+                             }
+                         }
+                     }
+                     .slide-label {
+                         position: absolute;
+                         transition: unset;
+                         top: -32px;
+                         /***************KILL MATERIAL ANIMATIONS********/
+                         &:before {
+                             z-index: unset;
+                             content: "";
+                             position: unset;
+                             width: unset;
+                             height: unset;
+                             bottom: unset;
+                             left: unset;
+                             background: unset;
+                             transform: unset;
+                             transition: unset;
+                             top: unset;
+                         }
+                         &:after {
+                             z-index: unset;
+                             content: "";
+                             position: unset;
+                             width: unset;
+                             height: unset;
+                             bottom: unset;
+                             left: unset;
+                             background: unset;
+                             top: unset;
+                         }
+                         &.active-label {
+                             transition: none;
+                             top: -10px;
+                             &:after {
+                                 // background: var(--brand-grey);
+                                 background: var(--bmo-granite);
+                             }
+                             .label-text {
+                                 transition: none;
+                                 padding: 0px;
+                                 font-size: 1.4rem;
+                             }
+                         }
+                         .label-text {
+                             color: var(--label-color);
+                         }
+                     }
+                 }
+             }

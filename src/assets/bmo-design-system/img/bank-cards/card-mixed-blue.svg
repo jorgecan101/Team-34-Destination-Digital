@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 192.7 114.9" style="enable-background:new 0 0 192.7 114.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#005587;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{mask:url(#mask-3_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#001928;fill-opacity:0.13;}
+	.st4{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st5{mask:url(#mask-3_2_);fill-rule:evenodd;clip-rule:evenodd;fill:#001928;fill-opacity:0.1273;}
+	.st6{filter:url(#Adobe_OpacityMaskFilter_2_);}
+	.st7{mask:url(#mask-3_3_);fill-rule:evenodd;clip-rule:evenodd;fill:#001928;fill-opacity:7.919034e-02;}
+</style>
+<title>Card</title>
+<g id="Symbols">
+	<g id="SelectedCard_Savings" transform="translate(5.000000, 5.000000)">
+		<g id="SelectedCard">
+			<g id="Card">
+				<g id="Mask">
+					<path class="st0" d="M-1.2-5.1h185c2.2,0,4,1.8,4,4v107c0,2.2-1.8,4-4,4h-185c-2.2,0-4-1.8-4-4v-107C-5.2-3.3-3.4-5.1-1.2-5.1z
+						"/>
+				</g>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-128.4" y="-69" width="207" height="148.5">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="-128.4" y="-69" width="207" height="148.5" id="mask-3_1_">
+					<g class="st1">
+						<path id="path-2_1_" class="st2" d="M-1.2-5.1h185c2.2,0,4,1.8,4,4v107c0,2.2-1.8,4-4,4h-185c-2.2,0-4-1.8-4-4v-107
+							C-5.2-3.3-3.4-5.1-1.2-5.1z"/>
+					</g>
+				</mask>
+				<path id="Rectangle" class="st3" d="M-87.9-69H38c22.4,0,40.5,18.1,40.5,40.5V39c0,22.4-18.1,40.5-40.5,40.5h-126
+					c-22.4,0-40.5-18.1-40.5-40.5v-67.5C-128.4-50.9-110.3-69-87.9-69z"/>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="-43.6" y="-86.4" width="207" height="148.5">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="-43.6" y="-86.4" width="207" height="148.5" id="mask-3_2_">
+					<g class="st4">
+						<path id="path-2_2_" class="st2" d="M-1.2-5.1h185c2.2,0,4,1.8,4,4v107c0,2.2-1.8,4-4,4h-185c-2.2,0-4-1.8-4-4v-107
+							C-5.2-3.3-3.4-5.1-1.2-5.1z"/>
+					</g>
+				</mask>
+				<path id="Rectangle-Copy-2" class="st5" d="M-3.1-86.4h126c22.4,0,40.5,18.1,40.5,40.5v67.5c0,22.4-18.1,40.5-40.5,40.5h-126
+					c-22.4,0-40.5-18.1-40.5-40.5v-67.5C-43.6-68.3-25.4-86.4-3.1-86.4z"/>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="108.7" y="73.7" width="129.1" height="94">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="108.7" y="73.7" width="129.1" height="94" id="mask-3_3_">
+					<g class="st6">
+						<path id="path-2_3_" class="st2" d="M-1.2-5.1h185c2.2,0,4,1.8,4,4v107c0,2.2-1.8,4-4,4h-185c-2.2,0-4-1.8-4-4v-107
+							C-5.2-3.3-3.4-5.1-1.2-5.1z"/>
+					</g>
+				</mask>
+				<path id="Rectangle-Copy" class="st7" d="M149.2,73.7h48.1c22.4,0,40.5,18.1,40.5,40.5v13c0,22.4-18.1,40.5-40.5,40.5h-48.1
+					c-22.4,0-40.5-18.1-40.5-40.5v-13C108.7,91.8,126.9,73.7,149.2,73.7z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,170 @@
+    @import "variables";
+    /**************SWITCH CHECKBOX ***************/
+    
+     :root {
+        /*** Color values***/
+        --switch-button-bg-color: var(--brand-light-grey);
+        --switch-button-bg-color-active: var(--brand-pri);
+        --switch-rail-bg-color: var(--brand-dark-grey);
+        --switch-rail-bg-color-active: var(--brand-highlight);
+        /*** Non-color values***/
+        --switch-label-font-size: 1.6rem;
+        --switch-label-line-height: 24px;
+        --switch-rail-border-radius: 8px;
+        --switch-rail-height: 16px;
+        --switch-rail-width: 34px;
+        --switch-button-width-height: 24px;
+        --switch-button-border-radius: 12px;
+    }
+    
+    .ios {
+        --switch-label-font-size: 1.6rem;
+        --switch-label-line-height: 28px;
+        --switch-rail-border-radius: 14px;
+        --switch-rail-height: 27px;
+        --switch-rail-width: 46px;
+        --switch-button-width-height: 23px;
+        --switch-button-border-radius: 12px;
+    }
+    
+    .bmo-switch-wrap {
+        width: 32px;
+        cursor: pointer;
+        width: auto;
+        width: fit-content;
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+        .activate-switch {}
+        .switch-label {
+            font-size: 1.6rem;
+            width: fit-content;
+            display: inline-block;
+            line-height: 24px;
+            letter-spacing: .15px;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+            cursor: pointer;
+            &.left {
+                margin-right: 20px;
+                position: relative;
+                top: -2px;
+                &.ios {
+                    top: -9px;
+                }
+            }
+            &.right {
+                left: -8px;
+                position: relative;
+                top: -2px;
+                &.ios {
+                    top: -9px;
+                }
+            }
+        }
+        input {
+            display: inline-block;
+            float: right;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .bmo-switch-rail {
+            height: var(--switch-rail-height);
+            border-radius: var(--switch-rail-border-radius);
+            background-color: var(--switch-rail-bg-color);
+            width: 100%;
+            width: var(--switch-rail-width);
+            display: inline-block;
+            @include transition(.3s all ease);
+            &.active {
+                background-color: var(--switch-rail-bg-color-active);
+            }
+            &.ios {
+                height: var(--switch-rail-height);
+                width: var(--switch-rail-width);
+                border-radius: var(--switch-rail-border-radius);
+            }
+        }
+        .bmo-switch {
+            height: var(--switch-button-width-height);
+            width: var(--switch-button-width-height);
+            min-width: var(--switch-button-width-height);
+            max-width: var(--switch-button-width-height);
+            border-radius: var(--switch-button-border-radius);
+            background-color: var(--switch-button-bg-color);
+            @include transition(.3s all ease);
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+            position: relative;
+            top: 4px;
+            left: -40px;
+            display: inline-block;
+            cursor: pointer;
+            &.ios {
+                height: var(--switch-button-width-height);
+                width: var(--switch-button-width-height);
+                min-width: var(--switch-button-width-height);
+                max-width: var(--switch-button-width-height);
+                border-radius: var(--switch-button-border-radius);
+                top: -2px;
+                left: -44px;
+                &.active {
+                    left: -26px;
+                }
+            }
+            &.active {
+                background-color: var(--switch-button-bg-color-active);
+                left: -20px;
+            }
+            &:focus {
+                box-shadow: var(--global-focus-shadow);
+                @include transition(.0s all ease);
+            }
+        }
+        &.dual {
+            .bmo-switch {
+                background-color: var(--switch-button-bg-color-active);
+            }
+            .bmo-switch-rail {
+                background-color: var(--switch-rail-bg-color-active);
+            }
+        }
+        &.full-width {
+            width: 100%;
+            .switch-label {
+                &.left {
+                    position: relative;
+                    top: -2px;
+                    float: left;
+                }
+                &.ios {
+                    top: 0;
+                }
+            }
+            .bmo-switch-rail {
+                float: right;
+            }
+            .bmo-switch {
+                float: right;
+                top: -4px;
+                left: 16px;
+                &.active {
+                    top: -4px;
+                    left: 40px;
+                }
+                &.ios {
+                    top: 2px;
+                    left: 25px;
+                    &.active {
+                        left: 43px;
+                    }
+                }
+            }
+        }
+    }

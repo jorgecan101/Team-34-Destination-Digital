@@ -1,0 +1,20 @@
+import { AfterViewInit, ElementRef, OnInit } from '@angular/core';
+export declare class BmoNgCheckboxComponent implements OnInit, AfterViewInit {
+    private elementRef;
+    id: string;
+    label: string;
+    value: string;
+    name: string;
+    checked: boolean;
+    disabled: boolean;
+    isChild: boolean;
+    lastState: boolean;
+    constructor(elementRef: ElementRef);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    toggleChecked(): void;
+    setChecked(val: boolean | string): void;
+    private setLastState;
+    get nativeElement(): HTMLElement;
+    get inputElement(): HTMLInputElement;
+}

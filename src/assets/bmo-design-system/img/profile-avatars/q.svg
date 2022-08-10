@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar / Q</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    </defs>
+    <g id="PROFILE-LETTERS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar-/-Q">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="circle" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(27.000000, 24.000000)">
+                    <path d="M13,19 L17.9504055,23.9490893" id="Stroke-177" stroke="#73C3EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.84751769,0.00940976141 C8.84751769,0.00940976141 -0.513888557,-0.802600865 0.0221739428,12.6596959 C0.420705193,22.6693445 5.97201769,23.9135919 8.79351769,23.8931896" id="Stroke-219" stroke="#0079C1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.01505832,0.00940976141 C9.01505832,0.00940976141 18.3767458,-0.802600865 17.8406833,12.6596959 C17.4418708,22.6693445 11.8908396,23.9135919 9.06933957,23.8931896" id="Stroke-221" stroke="#0079C1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.1894817,22.0608384 C13.6035061,21.4747896 13.6035061,20.5252104 14.1894817,19.9391616 C14.7754573,19.3536128 15.7249177,19.3536128 16.3108933,19.9391616 C16.8963689,20.5252104 16.8963689,21.4747896 16.3108933,22.0608384 C15.7249177,22.6463872 14.7754573,22.6463872 14.1894817,22.0608384" id="Fill-305" stroke="none" fill="#231F20" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

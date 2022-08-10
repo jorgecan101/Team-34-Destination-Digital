@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="72" viewBox="0 0 95 72">
+  <g fill="none" fill-rule="evenodd" transform="translate(12 5)">
+    <path stroke="#005585" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M0,61 L47,61"/>
+    <path stroke="#73BEE8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M46,61 L72,61"/>
+    <path stroke="#0777BC" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6,42 C19.5873933,32.4645754 30.5422337,23.3638076 35.5,19"/>
+    <path stroke="#005585" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M33,21 C40.8738739,14.4216867 47.2072072,7.42168675 52,0"/>
+    <polyline stroke="#005585" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" points="42 3.684 51.913 0 54 10"/>
+    <rect width="8" height="11" x="9" y="48" fill="#BEE5FE"/>
+    <rect width="8" height="16" x="21" y="43" fill="#BEE5FE"/>
+    <rect width="8" height="29" x="34" y="30" fill="#BEE5FE"/>
+    <rect width="8" height="42" x="46" y="17" fill="#BEE5FE"/>
+    <rect width="8" height="54" x="58" y="5" fill="#BEE5FE"/>
+    <path fill="#001928" d="M46.990367,60.8626359 C47.0663696,61.409425 46.6843566,61.9148714 46.1370047,61.9902216 C45.5896527,62.0669054 45.0856356,61.6841531 45.009633,61.1373641 C44.9336304,60.5899082 45.3156434,60.0851286 45.8629953,60.0097784 C46.4096806,59.9330946 46.9143644,60.3158469 46.990367,60.8626359"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+import { ElementRef } from '@angular/core';
+export declare class BmoNgRadioButtonComponent {
+    private elementRef;
+    id: string;
+    value: string;
+    name: string;
+    type: 'traditional' | 'box';
+    label: string;
+    disabled: boolean;
+    constructor(elementRef: ElementRef);
+    get inputElement(): HTMLInputElement;
+}

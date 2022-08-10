@@ -1,0 +1,229 @@
+@import "variables";
+.table {
+    background-color: transparent;
+    width: 100%;
+    thead {
+        width: 100%;
+        display: table-header-group;
+        border-bottom: 2px solid var(--brand-grey);
+        .table-heading {
+            font-weight: 700;
+            font-size: 1.4rem;
+            display: table-cell;
+            text-align: left;
+            padding: 16px 16px 16px 16px;
+            box-sizing: border-box;
+        }
+    }
+    tbody {
+        .table-row {
+            border-bottom: 1px solid var(--brand-light-grey);
+            width: 100%;
+            padding: 0;
+            .table-data {
+                font-size: 1.6rem;
+                vertical-align: middle;
+                display: table-cell;
+                line-height: 32px;
+                padding: 8px 16px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox,
+    tbody .table-row .table-data .input-wrap.input-checkbox {
+        padding-left: 0;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox input[type="checkbox"]+label:before,
+    tbody .table-row .table-data .input-wrap.input-checkbox input[type="checkbox"]+label:before {
+        top: 0px;
+        left: -24px;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox input[type="checkbox"],
+    tbody .table-row .table-data .input-wrap.input-checkbox input[type="checkbox"] {
+        top: 12px;
+        left: 0px;
+        display: block;
+        margin: 0px;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox input[type="checkbox"]:first-of-type,
+    tbody .table-row .table-data .input-wrap.input-checkbox input[type="checkbox"]:first-of-type {
+       margin-top: -20px;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox label,
+    tbody .table-row .table-data .input-wrap.input-checkbox label {
+        top: -8px;
+        left: 24px;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox label {
+        text-indent: 8px;
+        font-family: var(--global-font);
+        font-weight: 700;
+        padding-left: 8px;
+        font-size: 1.4rem;
+    }
+    tbody .table-row .table-data .input-wrap.input-checkbox input[type="checkbox"]+label:before,
+    tbody .table-row .table-data .input-wrap.input-checkbox input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: 6px;
+    }
+    thead .table-row .table-heading .input-wrap.input-checkbox input[type="checkbox"]+label:before,
+    thead .table-row .table-heading .input-wrap.input-checkbox input[type="checkbox"] {
+        margin-right: 16px;
+    }
+    caption {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px);
+        /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+        transition: none;
+        -moz-transition: none;
+        -webkit-transition: none;
+    }
+    &.sortable {
+        thead {
+            .table-heading:not(.no-sort) {
+                cursor: default;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                cursor: pointer;
+            }
+            .table-heading:not(.no-sort):focus {
+                box-shadow: var(--global-focus-shadow);
+                outline: 0;
+            }
+            .table-heading:not(.no-sort):not(.sorted):not(.reverse):after {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url(~/assets/bmo-design-system/img/icons/16/16-baby-chevy-down.svg) no-repeat;
+                opacity: .6;
+                vertical-align: middle;
+                margin-left: 4px;
+                filter: var(--brand-dark-grey-filter);
+            }
+            .table-heading:not(no-sort):not(.no-sort):not(.reverse):hover:after {
+                opacity: 1;
+                background: url(~/assets/bmo-design-system/img/icons/16/16-baby-chevy-down.svg) no-repeat;
+                filter: var(--brand-pri-filter);
+            }
+            .table-heading span#sorttable_sortrevind,
+            .table-heading span#sorttable_sortfwdind {
+                font-size: 0;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 4px;
+                width: 16px;
+                height: 16px;
+            }
+            .table-heading span#sorttable_sortfwdind {
+                background: url(~/assets/bmo-design-system/img/icons/16/16-baby-chevy-down.svg) no-repeat;
+                filter: var(--brand-pri-filter);
+            }
+            .table-heading span#sorttable_sortrevind {
+                background: url(~/assets/bmo-design-system/img/icons/16/16-baby-chevy-up.svg) no-repeat;
+                filter: var(--brand-pri-filter);
+            }
+            .table-heading span#sorttable_sortrevind {
+                background: url(~/assets/bmo-design-system/img/icons/16/16-baby-chevy-up.svg) no-repeat;
+            }
+        }
+    }
+}
+
+.responsive-table-wrap {
+    overflow: scroll;
+    .table {
+        &.responsive-table {
+            min-width: 1240px;
+        }
+    }
+}
+
+.sticky-left-table-wrap {
+    overflow: scroll;
+    max-height: 300px;
+    .sticky-left-table {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        min-width: 1240px;
+        .table-head {
+            border: none;
+            .table-row {
+                .table-heading {
+                    border-bottom: 2px solid var(--bmo-grey);
+                    background-color: var(--global-bg-color);
+                    &.dead-zone {
+                        position: sticky;
+                        left: 0;
+                        z-index: 999;
+                        border-bottom: 2px solid var(--bmo-grey);
+                    }
+                }
+            }
+        }
+        .table-body {
+            overflow: scroll;
+            .table-row {
+                .table-heading {
+                    text-align: left;
+                    vertical-align: middle;
+                    padding-left: 16px;
+                    position: sticky;
+                    left: 0;
+                    background-color: var(--global-bg-color);
+                }
+            }
+        }
+    }
+}
+
+.double-sticky-table-wrap {
+    overflow: scroll;
+    max-height: 300px;
+    .double-sticky {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        min-width: 1240px;
+        .table-head {
+            border: none;
+            .table-row {
+                .table-heading {
+                    position: sticky;
+                    top: 0;
+                    border-bottom: 2px solid var(--bmo-grey);
+                    background-color: var(--global-bg-color);
+                    &.dead-zone {
+                        position: sticky;
+                        left: 0;
+                        top: 0;
+                        z-index: 999;
+                        border-bottom: 2px solid var(--bmo-grey);
+                    }
+                }
+            }
+        }
+        .table-body {
+            overflow: scroll;
+            .table-row {
+                .table-heading {
+                    text-align: left;
+                    vertical-align: middle;
+                    padding-left: 16px;
+                    position: sticky;
+                    left: 0;
+                    background-color: var(--global-bg-color);
+                }
+            }
+        }
+    }
+}

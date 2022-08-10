@@ -1,0 +1,161 @@
+:root {
+    --modal-border: #ffffff;
+}
+
+.modal {
+    max-width: 744px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: var( --global-bg-color-raised);
+    box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+    padding: 48px 32px;
+    position: fixed;
+    left: 50%;
+    margin-left: -372px;
+    top: 18%;
+    z-index: var(--zindex-modal);
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    border: 2px solid var(--modal-border);
+    .body-scroll.scrollbar {
+        overflow-y: scroll;
+        clear: both;
+        max-height: 50vh;
+    }
+    &:focus {
+        box-shadow: unset;
+        box-sizing: border-box;
+    }
+    &.active {
+        top: 20%;
+        visibility: visible;
+        opacity: 1;
+        border: 2px solid var(--modal-border);
+    }
+    .modal-close {
+        position: absolute;
+        left: calc(100% - 44px);
+        margin-top: -36px
+    }
+}
+
+@media only screen and (max-width: $md-screen-max) {
+    .bmo-overlay-dark.active {
+        background-color: rgba(0, 0, 0, .00);
+    }
+    .modal {
+        left: 0px;
+        margin-left: unset;
+        height: 100%;
+        max-width: 768px;
+        top: 0;
+        border-radius: 0;
+        &.active {
+            top: 0;
+        }
+        .body-scroll.scrollbar {
+            overflow-y: scroll;
+            clear: both;
+            max-height: 80vh;
+        }
+        .icon-button.modal-close {
+			position: absolute;
+    		left: 16px;
+			// margin-top: 0px;
+    		// top: 16px;
+		}
+        .modal-title {
+            font-size: 1.6rem;
+            letter-spacing: 0.11px;
+            line-height: 24px;
+        }
+        .modal-body {
+            padding-right: 16px;
+        }
+        &.md {
+            padding: 0;
+            top: calc(0px + 20vh);
+            transition: all .3s;
+            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+            &.active {
+                top: 0px;
+            }
+            .modal-body {
+                padding-left: 56px;
+            }
+            .modal-header {
+                background-color: var(--brand-pri);
+                padding: 8px;
+                width: 100%;
+                box-sizing: border-box;
+                &:after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+                .modal-title-text {
+                    text-align: left;
+                    font-size: 1.6rem;
+                    font-family: 'heebo';
+                    line-height: 24px;
+                    padding: 12px 0 12px 40px;
+                    color: var(--brand-white);
+                }
+            }
+            .icon-button {
+                left: 16px;
+                top: 20px;
+                margin-top: 0;
+                .icon {
+                    filter: var(--brand-white-filter);
+                }
+            }
+        }
+        &.ios {
+            padding: 0;
+            top: calc(0px + 100vh);
+            transition: all .5s;
+            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+            &.active {
+                top: 0px;
+            }
+            .modal-header {
+                background-color: var(--brand-lightes-grey);
+                border-bottom: 1px solid var(--brand-light-grey);
+                padding: 8px;
+                width: 100%;
+                box-sizing: border-box;
+                ;
+                &:after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+                .modal-title-text {
+                    text-align: center;
+                    font-size: 1.4rem;
+                    font-family: 'heebo';
+                    line-height: 24px;
+                    padding: 2px 0;
+                }
+            }
+            .icon-button {
+                left: 16px;
+                top: 8px;
+                margin-top: 0;
+            }
+            .modal-body {
+                padding: 0 16px;
+                width: unset;
+            }
+            .body-scroll {
+                overflow-y: scroll;
+                max-height: calc(100vh - 44px);
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+    /**************FONTS*****************/
+    
+     :root {
+        --display-1: 4.4rem;
+        --display-2: 3.6rem;
+        --headline-1: 2.8rem;
+        --title-1: 2.4rem;
+        --sub-heading: 2.2rem;
+        --body-1: 1.8rem;
+        --body-2: 1.6rem;
+        --body-3: 1.4rem;
+        --disclaimer-1: 1.2rem;
+        --disclaimer-2: 1.0rem;
+    }
+    
+    @media only screen and (max-width: $sm-screen-max) {
+         :root {
+            --display-1: 3.6rem;
+            --display-2: 3.6rem;
+            --headline-1: 2.8rem;
+            --title-1: 2.4rem;
+            --sub-heading: 1.8rem;
+            --body-1: 1.6rem;
+            --body-2: 1.6rem;
+            --body-3: 1.4rem;
+            --disclaimer-1: 1.2rem;
+            --disclaimer-2: 1.0rem;
+        }
+    }
+    
+    .black {
+        color: var(--brand-black)
+    }
+    
+    .white {
+        color: var(--brand-white)
+    }
+    
+    .blue {
+        color: var(--brand-pri)
+    }
+    
+    .ultramarine {
+        color: var(--brand-dark-blue)
+    }
+    
+    .positive {
+        color: var(--brand-positive)
+    }
+    
+    .negative {
+        color: var(--brand-negative)
+    }
+    
+    .granite {
+        color: var(--brand-dark-grey)
+    }
+    
+    display-1,
+    display-2,
+    headline-1,
+    title-1,
+    sub-heading,
+    body-1,
+    body-2,
+    body-3,
+    disclaimer-1,
+    disclaimer-2 {
+        display: block;
+    }
+    
+    .display-1 {
+        font-size: var(--display-1);
+        line-height: calc(var(--display-1) * 1.5);
+    }
+    
+    .display-2 {
+        font-size: var(--display-2);
+        line-height: calc(var(--display-2) * 1.5);
+        letter-spacing: -0.35px;
+    }
+    
+    .headline-1 {
+        font-size: var(--headline-1);
+        line-height: calc(var(--headline-1) * 1.5);
+    }
+    
+    .title-1 {
+        font-size: var(--title-1);
+        line-height: calc(var(--title-1) * 1.5);
+    }
+    
+    .sub-heading {
+        font-size: var(--sub-heading);
+        line-height: calc(var(--sub-heading) * 1.5);
+        letter-spacing: 0px;
+    }
+    
+    .body-1 {
+        font-size: var(--body-1);
+        line-height: calc(var(--body-1) * 1.5);
+        letter-spacing: 0px;
+    }
+    
+    .body-2 {
+        font-size: var(--body-2);
+        line-height: calc(var(--body-2) * 1.5);
+        letter-spacing: .15px;
+    }
+    
+    .disclaimer-1 {
+        font-size: var(--disclaimer-1);
+        line-height: calc(var(--disclaimer-1) * 1.5);
+        letter-spacing: .25px;
+    }
+    
+    .disclaimer-2 {
+        font-size: var(--disclaimer-2);
+        line-height: calc(var(--disclaimer-2) * 1.5);
+        letter-spacing: .30px;
+    }
+    
+    .bold {
+        font-weight: 700;
+    }
+    
+    .medium {
+        font-weight: 500;
+    }
+    
+    .light {
+        font-weight: 300;
+    }

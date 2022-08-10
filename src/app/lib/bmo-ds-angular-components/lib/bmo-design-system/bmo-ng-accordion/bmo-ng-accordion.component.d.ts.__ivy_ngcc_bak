@@ -1,0 +1,28 @@
+import { OnInit, ElementRef, AfterViewInit } from '@angular/core';
+export declare class BmoNgAccordionComponent implements OnInit, AfterViewInit {
+    accordionTrigger: ElementRef;
+    accordionPanel: ElementRef;
+    panelContainer: ElementRef;
+    panelContent: ElementRef;
+    bmoAccordionClass: boolean;
+    iconRightAttribute: any;
+    compactAttribute: any;
+    title: string;
+    get compact(): boolean;
+    set compact(compact: boolean);
+    _compact: boolean;
+    get iconRight(): boolean;
+    set iconRight(iconRight: boolean);
+    _iconRight: boolean;
+    get expanded(): boolean;
+    set expanded(expanded: boolean);
+    _expanded: boolean;
+    id: any;
+    constructor();
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    toggleAccordion(): void;
+    keydownShouldToggleAccordion(event: KeyboardEvent): void;
+    keyupShouldToggleAccordion(event: KeyboardEvent): void;
+    private setPanelContainerHeight;
+}

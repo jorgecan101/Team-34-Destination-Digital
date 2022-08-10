@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Date picker short term</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="../../styles/css/global.css">
+      <link rel="stylesheet" href="../../fonts/heebo.css">
+   </head>
+   <body class="scrollbar">
+      <div class="bmo-container">
+         <div class="row">
+            <div class="grid col-100">
+               <div class="panel-content">
+                  <div class="row pb-1u grid col-100">
+                     <h1 class="display-2 light">Date picker long term plain HTML</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="grid col-33 sm-col-100 short-term"></div>
+            <div class="grid col-33 sm-col-100 short-term"></div>
+            <div class="grid col-33 sm-col-100 short-term"></div>
+         </div>
+      </div>
+      <script src="../../js/luxon.min.js"></script>
+    <script type="module">
+        import('./BmoDatePicker.Luxon.module.min.js').then(module => {
+            const shortTerm = document.querySelectorAll('.short-term');
+			new module.BmoDatePicker(shortTerm[0], {
+				'label': 'With calendar'
+			});
+			new module.BmoDatePicker(shortTerm[2], {
+				'field-only': true,
+				'label': 'Field only'
+			});
+			new module.BmoDatePicker(shortTerm[1], {
+				'init-date': '1977-12-22',
+				'min-date': 1980,
+				'max-date': 2009,
+				'label': 'Invalid example'
+			});
+        });
+    </script>
+   </body>
+</html>

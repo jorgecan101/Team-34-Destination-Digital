@@ -1,0 +1,14 @@
+import { AfterContentInit, ElementRef, QueryList } from '@angular/core';
+import { BmoNgTabPanelComponent } from './bmo-ng-tab-panel.component';
+import { BmoNgTabComponent } from './bmo-ng-tab.component';
+export declare class BmoNgTabListComponent implements AfterContentInit {
+    private elementRef;
+    tabsWrapClass: boolean;
+    dslTabs: QueryList<BmoNgTabComponent>;
+    dslPanels: QueryList<BmoNgTabPanelComponent>;
+    private selectedTabIndex;
+    constructor(elementRef: ElementRef);
+    ngAfterContentInit(): void;
+    selectTab(tabId: number): void;
+    private scrollTabsIfNeeded;
+}

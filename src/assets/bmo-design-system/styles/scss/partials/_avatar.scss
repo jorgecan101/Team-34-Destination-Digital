@@ -1,0 +1,103 @@
+@import "variables";
+.profile-image {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    border: 1px solid #D8D8D8;
+    margin-right: 16px;
+    overflow: hidden;
+    &.avatar {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &.a {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/a.svg);
+        }
+        &.b {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/b.svg);
+        }
+        &.c {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/c.svg);
+        }
+        &.d {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/d.svg);
+        }
+        &.e {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/e.svg);
+        }
+        &.f {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/f.svg);
+        }
+        &.g {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/g.svg);
+        }
+        &.h {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/h.svg);
+        }
+        &.i {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/i.svg);
+        }
+        &.j {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/j.svg);
+        }
+        &.k {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/k.svg);
+        }
+        &.l {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/l.svg);
+        }
+        &.m {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/m.svg);
+        }
+        &.n {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/n.svg);
+        }
+        &.o {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/o.svg);
+        }
+        &.p {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/p.svg);
+        }
+        &.q {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/q.svg);
+        }
+        &.r {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/r.svg);
+        }
+        &.s {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/s.svg);
+        }
+        &.t {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/t.svg);
+        }
+        &.u {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/u.svg);
+        }
+        &.v {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/v.svg);
+        }
+        &.w {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/w.svg);
+        }
+        &.x {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/x.svg);
+        }
+        &.y {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/y.svg);
+        }
+        &.z {
+            background-image: url(~/assets/bmo-design-system/img/profile-avatars/z.svg);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: $sm-screen-max) {
+    .profile-image {
+        height: 48px;
+        width: 48px;
+    }
+}

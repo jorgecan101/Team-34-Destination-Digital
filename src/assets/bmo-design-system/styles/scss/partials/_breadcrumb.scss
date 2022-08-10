@@ -1,0 +1,64 @@
+@import "variables";
+.bread-crumb {
+    padding: 24px 0;
+    li {
+        display: inline-block;
+        &:first-child a {
+            padding-left: 0;
+        }
+        &:last-child a {
+            background-image: none;
+            &:hover {
+                background-image: none;
+                color: var(--brand-black);
+                cursor: default;
+            }
+        }
+        .bread-crumb-link {
+            padding: 6px 0;
+            padding-right: 32px;
+            padding-left: 8px;
+            font-size: 1.4rem;
+            color: var(--brand-pri);
+            font-weight: 700;
+            display: flex;
+            position: relative;
+            align-items: center;
+            cursor: pointer;
+            line-height: 24px;
+            .icon.baby-chevy-right {
+                position: absolute;
+                right: 3px;
+                // width: 10px;
+                // height: 10px;
+            }
+            &:focus {
+                .icon {
+                    filter: var(--brand-pri-filter-over);
+                }
+            }
+            &.first-of-type {
+                padding-left: 0;
+            }
+            /*&.last {
+				background-image: none;
+				&:hover {
+					background-image: none;
+		
+					cursor: default;
+				}
+			}*/
+            &:hover {
+                .icon {
+                    filter: var(--brand-pri-filter-over);
+                }
+            }
+            &.active {
+                color: var(--brand-black);
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}

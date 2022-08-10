@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Date picker long term</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="../../styles/css/global.css">
+      <link rel="stylesheet" href="../../fonts/heebo.css">
+   </head>
+   <body class="scrollbar">
+      <div class="bmo-container">
+         <div class="row">
+            <div class="grid col-100">
+               <div class="panel-content">
+                  <div class="row pb-1u grid col-100">
+                     <h1 class="display-2 light">Date picker long term plain HTML</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="grid col-33 sm-col-100 long-term"></div>
+            <div class="grid col-33 sm-col-100 long-term"></div>
+            <div class="grid col-33 sm-col-100 long-term"></div>
+         </div>
+      </div>
+      <script src="../../js/luxon.min.js"></script>
+    <script type="module">
+        import('./BmoDatePicker.Luxon.module.min.js').then(module => {
+            const longTerm = document.querySelectorAll('.long-term');
+            new module.BmoDatePicker(longTerm[0], {
+                'min-decade': 1990,
+                'max-decade': 2050,
+                'label': 'With calendar'
+            }, true);
+            new module.BmoDatePicker(longTerm[2], {
+                'min-decade': 1980,
+                'max-decade': 2009,
+                'field-only': true,
+                'label': 'Field only'
+            }, true);
+            new module.BmoDatePicker(longTerm[1], {
+                'init-date': '1977-12-22',
+                'min-decade': 1980,
+                'max-decade': 2009,
+                'label': 'Invalid example'
+            }, true);
+        });
+    </script>
+   </body>
+</html>

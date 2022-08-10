@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Header</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../styles/css/global.css">
+    <link rel="stylesheet" href="../../fonts/heebo.css">
+</head>
+
+<body class="scrollbar">
+    <a href="#main-content" class="header-skip">Skip to Main Content</a>
+    <header class="bmo-header">
+            <div class="bmo-container">				
+                <div class="bmo-logo">
+                    <a href="#"><img src="~/assets/bmo-design-system/img/bmo-roundel-logo-dark-bg.svg" alt="BMO of Montreal Logo - Home Link" /></a>
+                </div>
+                <div class="header-content">
+                        <nav class="primary-nav">
+                                <ul>
+                                    <li><a href="#" class="primary-link">Nav Link</a></li>
+                                    <li><a href="#" class="primary-link">Nav Link</a></li>
+                                    <li>
+                                        <a href="#" aria-expanded="false" class="primary-link expandable"> Nav Link Expandable</a>
+                                        <div class="sub-nav-container" role="presentation">	
+                                            <div class="bmo-container">
+                                                <ul class="sub-nav">
+                                                    <li><a href="#">Sub Nav Link</a></li>
+                                                    <li><a href="#">Sub Nav Link</a></li>
+                                                    <li><a href="#">Sub Nav Link</a></li>
+                                                    <li><a href="#">Sub Nav Link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="profile-menu-wrap">
+                                <button class="profile-menu-button" id="profile-menu-button" aria-expanded="false">
+                                    <span title="profile" class="icon medium profile white"></span>
+                                    BMO User-longname
+                                    <span title="chevron down" class="icon small baby-chevy-down white"></span>
+                                </button>
+                                <div class="profile-menu">
+                                    <div class="profile-menu-header">
+                                        <span title="profile" class="icon medium profile granite"></span>
+                                        <h2>BMO User-longname<span class="signed-in-to">Signed into BMO Nesbitt Burns</span></h2>
+                                        <span title="chevron down" class="icon small baby-chevy-down granite"></span>
+                                    </div>
+                                    <nav class="profile-nav">
+                                        <ul>								
+                                            <li><a href="#" class="dash-settings-icon"><span title="settings" class="icon medium settings blue"></span>Link with Icon</a></li>
+                                            <li><a href="#" class="sign-out"><span title="exit" class="icon medium exit blue"></span>Link with Icon</a></li>
+                                        </ul>
+                                        <span class="last-login">Last login: 12:31pm May 5, 2017</span>
+                                    </nav>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <!------------------------------------------------------->
+            <!------------------------------------------------------->
+            <!------------------------------------------------------->
+            <!------------------BEGIN MOBILE NAV--------------------->
+            <!------------------------------------------------------->
+            <!------------------------------------------------------->
+            <!------------------------------------------------------->
+            <nav class="mobile-task-bar">
+                <ul>
+                    <li>
+                        <a href="#" class="user-menu-trigger" aria-label="Profile Settings" aria-expanded="true"><span title="profile" class="icon medium profile white"></span></a>
+                    </li>
+                    <div class="user-setting-menu">
+                        <div class="user-setting-menu-header">
+                            <a class="user-setting-menu-header-back" aria-expanded="true"></a>
+                            <span class="user-setting-menu-header-title">User Profile</span>
+                        </div>
+                        <span class="profile-image avatar-f mt-2u"></span>
+                        <span class="user-setting-menu-name">Jean-Sebastien</span>
+                        <span class="user-setting-signed-in">Signed into InvestorLine</span>
+                        <ul class="user-setting-menu-list">
+                            <li>
+                                <a href="#" class="settings"><span title="settings" class="icon medium settings blue"></span>Settings</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sign-out"><span title="exit" class="icon medium exit blue"></span>Sign out</a>
+                            </li>
+                        </ul>
+                        <span class="user-setting-last-login">Last login: 12:31 pm May 5, 2017</span>
+                    </div>
+                    <li>
+                        <a href="#" class="mobile-menu-button"><span class="hidden-label">Navigation Toggle</span></a>
+                        <ul class="mobile-nav-list first-drawer">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li>
+                                <a href="#" class="mobile-menu-expandable" aria-expanded="false">Link Expandable<span title="Chevron Right" class="icon small baby-chevy-right blue"></span></a>
+                                <ul class="mobile-nav-list second-drawer">
+                                    <li><a href="#" class="drawer-header-back"><span title="Chevron left" class="icon small baby-chevy-left blue"></span>Second Level Nav</a></li>
+                                    <li><a href="#">L2 Link</a></li>
+                                    <li><a href="#">L2 Link</a></li>
+                                    <li><a href="#">L2 Link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>	
+                        </ul>
+                    </li>
+                </ul>				
+            </nav>
+    </header>
+    <div class="bmo-container pt-2u">
+        <div class="row pb-1u">
+            <div class="grid col-100">
+                <div class="panel-content">
+                    <div class="row pb-1u grid col-100">
+                        <h1 class="display-2 light">Complex header plain HTML</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bmo-overlay-light"></div>
+    <div class="bmo-overlay"></div>
+	<div class="bmo-overlay-dark"></div>
+    <script type="module" src="../../js/core.js"></script>
+    <!-- <script src="./header.js"></script> -->
+</body>
+
+</html>

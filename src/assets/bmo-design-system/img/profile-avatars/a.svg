@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar / A</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    </defs>
+    <g id="PROFILE-LETTERS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar-/-A">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="circle" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group-7" mask="url(#mask-2)">
+                <g transform="translate(25.000000, 22.000000)">
+                    <path d="M0.0545281608,27.993 L10.5244813,0.000512195122" id="Stroke-129" stroke="#1D3C4F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <g id="Group-134" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(10.243236, 0.000000)" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M0.281245122,0.000682926829 L10.7771478,27.9935122" id="Stroke-133" stroke="#0079C1" stroke-width="3"></path>
+                    </g>
+                    <g id="Group-138" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(2.731530, 18.590786)" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M0.211249675,1.28243688 L15.4364545,1.24254743" id="Stroke-137" stroke="#73C3EB" stroke-width="3"></path>
+                    </g>
+                    <path d="M19.625,19.875 C19.625,20.703 18.9535,21.375 18.125,21.375 C17.2965,21.375 16.625,20.703 16.625,19.875 C16.625,19.0465 17.2965,18.375 18.125,18.375 C18.9535,18.375 19.625,19.0465 19.625,19.875" id="Fill-281" stroke="none" fill="#231F20" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

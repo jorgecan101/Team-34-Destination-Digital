@@ -5,9 +5,7 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "strict": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -15,18 +13,24 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "es2015",
     "module": "es2020",
     "lib": [
-      "es2020",
+      "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "bmo-ds-angular-components": [
+        "lib/bmo-ds-angular-components"
+      ]
+    }
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "enableIvy": false
   }
 }

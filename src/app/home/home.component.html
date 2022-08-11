@@ -1,31 +1,332 @@
-<nav class="navbar navbar-default" style="background-color: #0075BE;">
+
+  <nav class="navbar navbar-default" style="background-color: #0075BE;">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" >
-        <!-- <img class="brand-logo" src="./assets/images/bmo-roundel-logo.svg" alt="A part of <span aria-hidden=&quot;true&quot;>BMO</span><span class=&quot;off-screen-element&quot;>B M O</span> financial group"> -->
-        </a>
+      <img class="brand-logo" src="./assets/images/bmo-roundel-logo.svg" alt="A part of <span aria-hidden=&quot;true&quot;>BMO</span><span class=&quot;off-screen-element&quot;>B M O</span> financial group">
+      </a>
       </div>
       <ul class="nav navbar-nav">
-      <li><img src="assets/images/logo.png" class="img-rounded" alt="BMO Logo"> </li>
-        <li class="active"><a href="home"style="color: black;">Reservation</a></li>
-        <li><a href="floor-plan"style="color: white;">Floor Plan</a></li>
-        <!-- TODO: This might change or is not needed?? -->
-        <!-- <li><a href="new-desk-registration"style="color: white;">New Desk Registration</a></li> -->
-        <!-- <li class="active" ><a href="#"style="color: white;">New Desk Registration</a></li>       -->
+    <li><img src="assets/images/logo.png" class="img-rounded" alt="BMO"> </li>
+        <li class="active"style="background-color: white;" ><a href="#" >Reservation</a></li>
+        <li ><a routerLink="/floor-plan" style="color: white;">Floor Plan</a></li>          
       </ul>
     </div>
-</nav>
-
-<div class="container">
-    <h2>Reservation</h2>
-    <form action="/action_page.php">
-      <div class="input-group">
-       <label for="email">Office ID:</label>
-        <input type="Office ID" class="form-control" id="email" placeholder="Enter Office ID" name="Office ID">
-      </div> 
-      <br>	
-      <button type="submit" class="btn btn-default">Search</button>
-      <button type="submit" class="btn btn-default">Visitor</button>
-        
-    </form>
-</div>
+  </nav>
+  <div class="container">
+    <div id="divBookingType" >
+    <button  id='btnReservation' (click)="fnShow();"  class="btn btn-primary btn-lg btn-block">Reservation</button>
+    <button id='btncancelation'  class="btn btn-primary btn-lg btn-block">cancelation</button>
+    </div>
+  </div>	
+  <div class="container">
+    <div id="divVisitorType" style="display: none;">
+    <button  type="checkbox" (click)="fnOffice();" class="btn btn-primary btn-lg btn-block">Employee</button>
+    <button  type="checkbox" (click)="fnVisitor();" class="btn btn-primary btn-lg btn-block">Visitor</button>
+    </div>
+  </div>
+  
+  <form>
+  <div id='divOffice' class="container" style="display: none;" class="form-group">
+    <div class="form-group">
+      <label for="OfficeID">Office ID</label>
+      <input type="OfficeID" class="form-control" id="email" placeholder="Enter Office ID" name="OfficeID">
+      </div>  
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="chkAccessibility">
+      <label class="form-check-label" for="exampleCheck1">Accessibility</label>
+    </div>
+    <div>
+      <button type="button" (click)="fnBooking();"  class="btn btn-primary">Search</button>  
+    </div>			
+   <div id='divVisitor' class="container" style="display: none;" class="form-group">
+    <div class="form-group">
+      <label for="FirstName">First Name</label>
+      <input type="FirstName" class="form-control" id="FN" placeholder="Enter First Name" name="FirstName">
+      </div>
+    <div class="form-group">
+      <label for="LastName">Last Name</label>
+      <input type="LastName" class="form-control" id="FN" placeholder="Enter Last Name" name="LastName">
+      </div> 	
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="chkVAccessibility">
+      <label class="form-check-label" for="exampleCheck1">Accessibility</label>
+    </div>
+      <button type="button" (click)="fnVisitorBooking();"  class="btn btn-primary">Search</button>  
+    </div>	
+   
+   </div>
+   
+   <div id="divOfficeListWithA" style="display: none;" class="container">
+    <h2>Available Desk List </h2>           
+    <table class="table">
+      <thead>
+        <tr>
+          <th>DeskId</th>
+          <th>Ethernet port</th>
+          <th>Desktop</th>
+      <th>Monitor</th>
+          <th>Keyboard</th>
+          <th>Mouse</th>		
+      <th>Close to washroom</th>
+          <th>Close to Exit</th>
+          <th>Privacy rating</th>
+      <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>B302_F11_D1</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D1','Yes','No',2,1,1,'Yes','Yes',4)" class="btn btn-primary">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D19</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D19','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D20</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>1</th>
+      <th><button class="btn btn-primary" type="button" onclick="fnMyBooking('divOfficeListWithA','B302_F11_D20','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D21</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>1</th>
+      <th><button class="btn btn-primary" type="button" onclick="fnMyBooking('divOfficeListWithA','B302_F11_D21','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D11</th>
+          <th>Yes</th>
+          <th>Yes</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" onclick="fnMyBooking('divOfficeListWithA','B302_F11_D11','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   
+   <div id="divOfficeListWithoutA" style="display: none;" class="container">
+    <h2>Available Desk List</h2>           
+    <table class="table">
+      <thead>
+        <tr>
+          <th>DeskId</th>
+          <th>Ethernet port</th>
+          <th>Desktop</th>
+      <th>Monitor</th>
+          <th>Keyboard</th>
+          <th>Mouse</th>		
+      <th>Close to washroom</th>
+          <th>Close to Exit</th>
+          <th>Privacy rating</th>
+      <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>B302_F11_D2</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>1</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D2','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D3</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>1</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D3','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D4</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>1</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D4','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D11</th>
+          <th>Yes</th>
+          <th>Yes</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D11','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D21</th>
+          <th>Yes</th>
+          <th>Yes</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D21','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D31</th>
+          <th>Yes</th>
+          <th>Yes</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D31','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D41</th>
+          <th>Yes</th>
+          <th>Yes</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>4</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D41','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D21</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>2</th>
+      <th><button class="btn btn-primary" type="button"(click)="fnMyBooking('divOfficeListWithA','B302_F11_D21','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D22</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>2</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D22','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+        <tr>
+          <th>B302_F11_D23</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>2</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D23','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      <tr>
+          <th>B302_F11_D24</th>
+          <th>Yes</th>
+          <th>No</th>
+      <th>2</th>
+          <th>1</th>
+          <th>1</th>		
+      <th>Yes</th>
+          <th>Yes</th>
+          <th>2</th>
+      <th><button class="btn btn-primary" type="button" (click)="fnMyBooking('divOfficeListWithA','B302_F11_D24','Yes','No',2,1,1,'Yes','Yes',4)">Available</button><th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   <div>
+    <div id='divBooking' class="container" style="display: none;" class="form-group">
+  
+      <label for="lblDeskId">Desk ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" class="form-control" id="lblDeskIdValue" name="lblDeskId" disabled><br>
+      <label for="lblEthernetport">Ethernet port</label>&nbsp;
+      <input type="text" class="form-control"  id="lblEthernetportValue" name="lblEthernetportValue" disabled><br>
+      <label for="lblDesktop">Desktop</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" class="form-control" id="lblDesktopValue" name="lblDesktopValue" disabled><br>
+      <label for="lblMonitor">Monitor</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" class="form-control" id="lblMonitorValue" name="lblMonitorValue" disabled><br>
+      <label for="lblKeyboard">Keyboard</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" class="form-control" id="lblKeyboardValue" name="lblKeyboardValue" disabled><br>
+      <label for="lblMouse">Mouse</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" class="form-control" id="lblMouseValue" name="lblMouseValue" disabled><br>
+      <label for="lblwashroomValue">Close to Washroom</label>&nbsp;
+      <input type="text" class="form-control" id="lblwashroomValue" name="lblwashroomValue" disabled><br>
+      <label for="lblExit">Close to Exit</label>&nbsp;
+      <input type="text" class="form-control" id="lblExitValue" name="lblExitValue" disabled><br>
+      <label for="lblPrivacy">Privacy rating</label>
+      <input type="text" class="form-control" id="lblPrivacyValue" name="lblPrivacyValue" disabled><br>
+      <label for="lblTimeSlot">Time Slot</label>
+      
+      <input type="date" id="TimeSlot" name="TimeSlot"> 
+      <br>
+      <br>
+      
+      <button type="button" (click)="fnBookingComplete();"  class="btn btn-primary">Reserve</button>  
+    </div>	
+      <div id="divComplete" class="container" style="display: none;">
+      <h4><span class="label label-success">Your Desk has been Reserved successfully. Thanks for choosing BMO Desk Reservation System. </span></h4>
+    </div>
+   </div>
+   
+   </form>
+  
+  
+  

@@ -1,4 +1,17 @@
-    
+<nav class="navbar navbar-default" style="background-color: #0075BE;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" >
+        <!-- <img class="brand-logo" src="./assets/images/bmo-roundel-logo.svg" alt="A part of <span aria-hidden=&quot;true&quot;>BMO</span><span class=&quot;off-screen-element&quot;>B M O</span> financial group"> -->
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><img src="assets/images/logo.png" class="img-rounded" alt="BMO Logo"> </li>
+        <li><a href="home"style="color: white;">Reservation</a></li>
+        <li class="active"><a href="floor-plan"style="color: black;">Floor Plan</a></li>
+      </ul>
+    </div>
+</nav>    
 
 <!-- Image should be center aligned and middle of page -->
 
@@ -13,9 +26,13 @@
         
         <!-- TODO: Logic for which image is going to be used should be written in ts file-->
         
-        <img src="assets/images/floor-plans.png" alt="generic-floor-plan-img">
+        <img [src]="getImageBasedOnScenario(scenario)" alt="generic-floor-plan-img">
         
 
     </div>
-    <button type="submit" class="btn btn-default" style="padding-top: 10px;">Confirm Choice</button>
+    <h3 *ngIf="selectedNumber != -1" style="margin-bottom: 16px;">You have selected seat {{selectedNumber}}</h3>
+    <!-- TODO: This should be temporary until proper scenario switching is implemented-->
+    <button (click)="changeScenario()" class="btn btn-success" style="padding-top: 10px;">Toggle Scenario</button>
+    <!-- Where this submits may change as well -->
+    <button type="submit" (click)="goToSuccessPage()" class="btn btn-default" style="padding-top: 10px;">Confirm Choice</button>
 </div>
